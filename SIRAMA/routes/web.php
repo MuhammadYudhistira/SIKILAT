@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/kamar', [KamarController::class, 'index']);
 Route::get('/kamar/create', [KamarController::class, 'create']);
 Route::post('/kamar', [KamarController::class, 'store']);
+Route::get('/kamar/{kamar}', [KamarController::class, 'destroy']);
+Route::put('/kamar/{kamar}', [KamarController::class, 'update']);
+Route::get('/kamar/{kamar}/edit', [KamarController::class, 'edit']);
 
 Route::get('/tipe', [TipeController::class, 'index']);
 Route::get('/tipe/create', [TipeController::class, 'create']);

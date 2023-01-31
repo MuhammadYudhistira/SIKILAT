@@ -45,7 +45,6 @@ class TipeController extends Controller
         $validated = $request->validate([
             'nama' => 'required',
             'harga' => 'required|min:1',
-            // 'stok' => 'required|min:1'
         ]);
 
         $tipe->update($validated);
