@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KamarController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TipeController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/auth/login', [AuthController::class, 'index']);
+Route::post('/auth', [AuthController::class, 'login']);
+Route::get('/auth/logout', [AuthController::class, 'logout']);
 
 Route::get('/kamar', [KamarController::class, 'index']);
 Route::get('/kamar/create', [KamarController::class, 'create']);
