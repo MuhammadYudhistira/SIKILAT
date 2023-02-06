@@ -22,22 +22,25 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-color: #DBF3D9;">
+<body style="background-color: #013555;">
     <div id="login" class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card py-5">
                     <div class="card-body py-5">
-                        <div class="row justify-content-center">
-                            <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" >
+                        <div class="row justify-content-center"  >
+                            <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" style="width:150px; ">
                         </div>
-                        <div><h1 align="center">Puskesmas Pauh</h1></div>
+                        <div>
+                            <h1 align="center"><b>SIRAMA</b> </h1>
+                            <h3 align="center">( Sistem Informasi Asrama BPSDM )</h3>
+                        </div>
 
                         <form method="POST" action="" class="mt-5">
                             @csrf
 
                             <div class="form-group row justify-content-center">
-                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:20px">
+                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:15px">
                                     <!-- <label for="username" class="form-label">Username</label> -->
                                     <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required placeholder="Masukkan Username">
 

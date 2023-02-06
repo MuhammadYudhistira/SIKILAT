@@ -53,8 +53,6 @@
     
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555">
-            <div class="d-flex justify-content-between">
-
             <div class="text-center mt-3" style="width:40px; ">
                 <a href="">
                     <img src="{{ asset('img/logobpsdm.png') }}" alt="logo BPSDM" class="logo" style="margin-left:20px">

@@ -38,6 +38,6 @@ Route::get('/tipe/{tipe}', [TipeController::class, 'destroy']);
 Route::put('/tipe/{tipe}', [TipeController::class, 'update']);
 Route::get('/tipe/{tipe}/edit', [TipeController::class, 'edit']);
 
-// Route::get('/home', [HomeController::class, 'home']);
+Route::get('/', [HomeController::class, 'index']);
 
 
