@@ -9,7 +9,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | Puskesmas X Koto II</title>
+    <title>Login</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -40,7 +40,7 @@
                             @csrf
 
                             <div class="form-group row justify-content-center">
-                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:15px">
+                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:150px">
                                     <!-- <label for="username" class="form-label">Username</label> -->
                                     <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required placeholder="Masukkan Username">
 

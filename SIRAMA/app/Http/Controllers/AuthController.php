@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    function index(){
+    public function index(){
         return view('auth.login');
     }
 
-    function login(Request $request){
+    public function login(Request $request){
         $validated = $request->validate([
             'email'=>'required',
             'password'=>'required'
@@ -28,14 +28,14 @@ class AuthController extends Controller
         if(Auth::attempt($infologin)){
 
             // return 'sukses';
-            return redirect('/');
+            return redirect('/kamar');
         }else{
 
             return redirect ('/auth/login');
         }
     }
 
-    function logout(){
+    public function logout(){
         Auth::logout();
         return redirect('/auth/login');
     }
