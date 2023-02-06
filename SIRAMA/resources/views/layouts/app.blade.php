@@ -61,7 +61,8 @@
                 <div class="toggler">
                     <a href="#" class="sidebar-hide d-xl-none d-block">asdfghjhgfdxzasdfghj</a>
                 </div>
-            </div>
+            </div> 
+            <!-- winanda -->
 
             <div class="text-center mt-3" style="width:40px; ">
                 <a href="">
