@@ -29,7 +29,7 @@
 
     <!-- W3school -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- data tables -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
@@ -50,7 +50,7 @@
 <body style="background-color: white">
     <div id="app">
 
-    
+
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555">
             <div class="d-flex justify-content-between">
@@ -63,7 +63,7 @@
             </div>
             <div class="menu-list mt-3 pt-3">
                 <div class="menu-item" >
-                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
+                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
                 <div class="menu-item">
                     <a href="" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
@@ -81,12 +81,11 @@
                 <div class="menu-item">
                     <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i>Laporan</a>
                 </div>
-                
+
 
             </div>
             <div class="logout mt-3 text-center">
-                <form action="" method="post">
-                    @csrf
+                <form action="/auth/logout" method="get">
                     <button type="submit" class="btn btn-primary px-5">Logout</button>
                 </form>
             </div>
@@ -127,7 +126,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" defer></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js" defer></script>
 
-     
+
 
     <!-- icon -->
     <script src="{{ asset('icon/js/all.js') }}"></script>

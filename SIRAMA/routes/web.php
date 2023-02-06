@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TipeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/auth/login', [AuthController::class, 'index']);
 Route::post('/auth', [AuthController::class, 'login']);
