@@ -9,7 +9,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | Puskesmas X Koto II</title>
+    <title>Login</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,24 +22,27 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-color: #DBF3D9;">
+<body style="background-color: #013555;">
     <div id="login" class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card py-5">
                     <div class="card-body py-5">
-                        <div class="row justify-content-center">
-                            <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" >
+                        <div class="row justify-content-center"  >
+                            <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" style="width:150px; ">
                         </div>
-                        <div><h1 align="center">Puskesmas Pauh</h1></div>
+                        <div>
+                            <h1 align="center"><b>SIRAMA</b> </h1>
+                            <h3 align="center">( Sistem Informasi Asrama BPSDM )</h3>
+                        </div>
 
-                        <form method="POST" action="/auth" class="mt-5">
+                        <form method="POST" action="" class="mt-5">
                             @csrf
 
                             <div class="form-group row justify-content-center">
-                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:20px">
+                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:150px">
                                     <!-- <label for="username" class="form-label">Username</label> -->
-                                    <input id="email" type="email" class="form-control @error('username') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Masukkan email">
+                                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required placeholder="Masukkan Username">
 
                                     @error('username')
                                         <span class="invalid-feedback" role="alert">
@@ -63,7 +66,7 @@
                             </div>
 
                             <div class="form-group row justify-content-center">
-                                <button name="submit" type="submit" class="btn btn-success px-5 mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px">
+                                <button type="submit" class="btn btn-success px-5 mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px">
                                     {{ __('Login') }}
                                 </button>
                             </div>

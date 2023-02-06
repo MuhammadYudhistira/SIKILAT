@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Daftar Tamu")
+@section('title', "Tipe Kamar")
 
 
 
@@ -17,22 +17,25 @@
 <body>
     <h3>Daftar Tipe Kamar</h3>
     <button><a href="/tipe/create">Tambah Tipe Kamar</a></button> <br><br>
-    <table class="table  table-bordered border-dark table-hover">
+    <div  class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <table class="table  table-bordered  table-hover" style="width:100%;background-color: white">
         <thead>
-            <tr class="bg-secondary">
-                <th scope="col" class="text-center">No.</th>
-                <th scope="col" class="text-center">Nama</th>
-                <th scope="col" class="text-center">Harga</th>
-                <th scope="col" class="text-center">Aksi</th>
+            <tr class="bg-secondary text-center" scope="col" class="">
+                <th style="width:5%">No.</th>
+                <th style="width:30%">Nama</th>
+                <th style="width:15%">Harga</th>
+                <th style="width:10%">Jumlah Kamar</th>
+                <th style="width:25%">Aksi</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($tipe as $t)
-            <tr>
-                <td class="text-center">{{ $loop->iteration }}.</td>
-                <td class="text-center">{{ $t->nama }}</td>
-                <td class="text-center">Rp.{{ $t->harga }}</td>
-                <td class="text-center">
+            <tr class="text-center">
+                <td>{{ $loop->iteration }}.</td>
+                <td>{{ $t->nama }}</td>
+                <td>Jumlah Kamar</td>
+                <td>Rp.{{ $t->harga }}</td>
+                <td>
 
                     <a href="/tipe/{{ $t->id }}/edit" class="btn btn-warning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -50,6 +53,8 @@
             @endforeach
         </tbody>
     </table>
+    </div>
+    
 </body>
 </html>
 @endsection

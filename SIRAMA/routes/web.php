@@ -37,6 +37,6 @@ Route::get('/tipe/{tipe}', [TipeController::class, 'destroy']);
 Route::put('/tipe/{tipe}', [TipeController::class, 'update']);
 Route::get('/tipe/{tipe}/edit', [TipeController::class, 'edit']);
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
 

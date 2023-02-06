@@ -60,3 +60,42 @@ input[type="checkbox"] {
 .content.onDesktop {
     margin-left: 10px;
 }
+
+table, th, td {
+    border:1px solid black;
+}
+
+/* button dashboard */
+.btn-db {
+    color: #fff;
+    background-color: #4FCF43;
+    border-color: #4FCF43;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 65px;
+    height: 65px;
+    margin:10px;
+}
+.btn-db:hover {
+  color: #fff;
+  background-color: #227dc7;
+  border-color: #2176bd;
+}
+.btn-db:focus, .btn-db.focus {
+  color: #fff;
+  background-color: #227dc7;
+  border-color: #2176bd;
+  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+.btn-db.disabled, .btn-db:disabled {
+  color: #fff;
+  background-color: #dc3434;
+  border-color: #3490dc;
+}
+.btn-db:not(:disabled):not(.disabled):active, .btn-db:not(:disabled):not(.disabled).active, .show > .btn-db.dropdown-toggle {
+  color: #fff;
+  background-color: #2176bd;
+  border-color: #1f6fb2;
+}
+.btn-db:not(:disabled):not(.disabled):active:focus, .btn-db:not(:disabled):not(.disabled).active:focus, .show > .btn-db.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}

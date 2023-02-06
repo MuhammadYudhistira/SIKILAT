@@ -49,8 +49,6 @@
 </head>
 <body style="background-color: white">
     <div id="app">
-
-
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555">
             <div class="text-center mt-3" style="width:40px; ">
@@ -61,7 +59,7 @@
             </div>
             <div class="menu-list mt-3 pt-3">
                 <div class="menu-item" >
-                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
+                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
                 <div class="menu-item">
                     <a href="" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
@@ -112,7 +110,7 @@
             </div>
         </main>
         <footer>
-            <p class="text-center">&copy 2022 Build by Kelompok 5 MPSI B</p>
+            <p class="text-center">&copy 2023 Build by BPSDM Prov.Sumbar</p>
         </footer>
     </div>
 
@@ -136,4 +134,3 @@
 
 </body>
 </html>
-s
