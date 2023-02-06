@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
-
 
 Route::get('/kamar', [KamarController::class, 'index']);
 Route::get('/kamar/create', [KamarController::class, 'create']);
@@ -34,6 +33,6 @@ Route::get('/tipe/{tipe}', [TipeController::class, 'destroy']);
 Route::put('/tipe/{tipe}', [TipeController::class, 'update']);
 Route::get('/tipe/{tipe}/edit', [TipeController::class, 'edit']);
 
-
+// Route::get('/home', [HomeController::class, 'home']);
 
 

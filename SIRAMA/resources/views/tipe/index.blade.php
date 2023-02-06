@@ -1,3 +1,11 @@
+@extends('layouts.app')
+
+@section('title', "Daftar Tamu")
+
+
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,3 +52,4 @@
     </table>
 </body>
 </html>
+@endsection
