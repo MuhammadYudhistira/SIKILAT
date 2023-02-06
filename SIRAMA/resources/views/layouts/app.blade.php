@@ -54,15 +54,6 @@
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555">
             <div class="d-flex justify-content-between">
-                <div class="logo">
-                    <a href="/"><img src="{{ asset('img/logobpsdm.png') }}" alt="Logo" width:100% height:50px></a>
-        
-                </div>
-                <div class="toggler">
-                    <a href="#" class="sidebar-hide d-xl-none d-block">asdfghjhgfdxzasdfghj</a>
-                </div>
-            </div> 
-            <!-- winanda -->
 
             <div class="text-center mt-3" style="width:40px; ">
                 <a href="">
