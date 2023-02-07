@@ -36,15 +36,15 @@
                             <h3 align="center">( Sistem Informasi Asrama BPSDM )</h3>
                         </div>
 
-                        <form method="POST" action="" class="mt-5">
+                        <form method="POST" action="/auth" class="mt-5">
                             @csrf
 
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:150px">
                                     <!-- <label for="username" class="form-label">Username</label> -->
-                                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required placeholder="Masukkan Username">
+                                    <input id="email" type="text" class="form-control @error('username') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Masukkan Username">
 
-                                    @error('username')
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

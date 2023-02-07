@@ -40,12 +40,13 @@
     </div>
 </div>
 
+
 <div class="card pt-3" style="background-color:#EDEDED;border-radius:10px">
     <div class="card-body">
         <!-- dropdown tipe kamar -->
         <div>
             <button class="dropdown-toggle btn btn-light"  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b style="color:#8C8C8C">Kamar Standar</b>  
+                <b style="color:#8C8C8C">Kamar Standar</b>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <a class="dropdown-item" href="" type="button">Kamar Standar</a>
@@ -60,16 +61,20 @@
 
         <br>
         <!-- kamar-kamar -->
-        <button style="" class="btn btn-db">
-            <b style="font-size:20px">101</b>
-        </button>
-        <button style="" class="btn btn-db" >
-            <b style="font-size:20px">102</b>
-        </button>
-        <button style="" class="btn btn-db" >
-            <b style="font-size:20px">103</b>
-        </button>
-        
+        @foreach ($kamar as $k)
+                {{-- @if($k->tipe_id == 2) --}}
+                <button style=""
+                @if($k->status == 1)
+                class="btn btn-db"
+                @else
+                class="btn btn-db" @disabled(true)
+                @endif>
+                    <b style="font-size:20px">{{$k->nomor}}</b>
+                </button>
+            {{-- @endif --}}
+
+        @endforeach
+
     </div>
 </div>
 @endsection

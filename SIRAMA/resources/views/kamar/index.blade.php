@@ -5,18 +5,9 @@
 
 
 @section('content')
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
 <body>
-    <h3>Daftar Tipe Kamar</h3>
-    <button><a href="/kamar/create">Tambah Tipe Kamar</a></button> <br><br>
+    <h3>Daftar Kamar</h3>
+    <button><a href="/kamar/create">Tambah Kamar</a></button> <br><br>
     <table class="table  table-bordered border-dark table-hover">
         <thead>
             <tr class="bg-secondary">
