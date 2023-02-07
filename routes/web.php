@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/transaksi/{kamar}/tamu', [HomeController::class, 'create']);
+Route::get('/transaksi/{kamar}/checkin', [HomeController::class, 'checkin']);
+Route::post('/transaksi/{kamar}/', [HomeController::class, 'store']);
+
 
 Route::get('/auth/login', [AuthController::class, 'index']);
 Route::post('/auth', [AuthController::class, 'login']);
@@ -36,6 +40,8 @@ Route::post('/tipe', [TipeController::class, 'store']);
 Route::get('/tipe/{tipe}', [TipeController::class, 'destroy']);
 Route::put('/tipe/{tipe}', [TipeController::class, 'update']);
 Route::get('/tipe/{tipe}/edit', [TipeController::class, 'edit']);
+
+
 
 Route::get('/home', [HomeController::class, 'index']);
 

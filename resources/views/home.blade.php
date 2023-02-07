@@ -10,7 +10,7 @@
             <b style="font-size:20px; color:#013555">Dashboard</b>
         </li>
     </ol>
-</nav>
+{{-- </nav> --}}
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
                 <div class="card-body" align="center">
                     <b style="color:#013555; font-size:20px; " >Jumlah Kamar Kosong</b>
                     <br>
-                    <b style="color:#4FCF43; font-size:50px; ">30</b>
+                    <b style="color:#4FCF43; font-size:50px; ">{{$count}}</b>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <div class="card-body" align="center">
                     <b style="color:#013555; font-size:20px; " >Jumlah Kamar Terisi</b>
                     <br>
-                    <b style="color:#FF5959; font-size:50px; margin-top::0px ">120</b>
+                    <b style="color:#FF5959; font-size:50px; margin-top::0px ">{{$countisi}}</b>
                 </div>
             </div>
         </div>
@@ -49,8 +49,8 @@
                 <b style="color:#8C8C8C">Kamar Standar</b>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <a class="dropdown-item" href="" type="button">Kamar Standar</a>
-                <a class="dropdown-item" href="" type="button">Kamar Deluxe</a>
+                <option class="dropdown-item" type="button">Kamar Standar</option>
+                <option class="dropdown-item" type="button">Kamar Deluxe</option>
             </div>
             <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
             <b style="color:#013555">Kamar Kosong</b>
@@ -69,7 +69,8 @@
                 @else
                 class="btn btn-db" @disabled(true)
                 @endif>
-                    <b style="font-size:20px">{{$k->nomor}}</b>
+                {{-- <a href="/transaksi/{{$k->id}}/new"></a> --}}
+                    <b style="font-size:20px" href="/transaksi/{{$k->id}}/new">{{$k->nomor}}</b>
                 </button>
             {{-- @endif --}}
 
