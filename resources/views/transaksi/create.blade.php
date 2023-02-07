@@ -10,7 +10,7 @@
     <h3>Transaksi</h3>
     <form action="/transaksi/{{$kamar ->id}}/" method="post" class="mb-5">
         @csrf
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="customer_id" class="form-label">Nama Tamu :</label>
 
             <select class="form-select" aria-label="Default select example" id="tipe_id" name="tipe_id">
@@ -19,7 +19,7 @@
                 <option value="{{ $t->id }}">{{ $t->nama }}</option>
                 @endforeach
             </select>
-        </div>
+        </div> --}}
         <div class="mb-3">
             <label for="nama" class="form-label">Nama Lengkap :</label>
             <input type="text" class="form-control" id="nama" placeholder="Masukkan nama produk" name="nama" required>

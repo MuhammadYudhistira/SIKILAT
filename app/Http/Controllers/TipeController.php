@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use App\Models\Tipe;
 use Illuminate\Http\Request;
 
 class TipeController extends Controller
 {
     public function index(){
+        $tipe  = Tipe::all();
+        $count = Kamar::where('tipe_id', 1)->count();
+        // // $count2 = Kamar::where('tipe_id', 2)->count();
 
-        $tipe = Tipe::all();
-
-        return view('tipe.index', compact('tipe'));
+        return view('tipe.index', compact('tipe','count'));
     }
 
     public function store(Request $request){

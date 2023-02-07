@@ -62,7 +62,7 @@
                     <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
                 <div class="menu-item">
-                    <a href="" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
+                    <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
                 </div>
                 <div class="menu-item">
                     <a class="menu-link nav-link  dropdown-toggle " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

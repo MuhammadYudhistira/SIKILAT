@@ -70,7 +70,7 @@
                 class="btn btn-db" @disabled(true)
                 @endif>
                 {{-- <a href="/transaksi/{{$k->id}}/new"></a> --}}
-                    <b style="font-size:20px" href="/transaksi/{{$k->id}}/new">{{$k->nomor}}</b>
+                    <a style="font-size:20px" href="/transaksi/{{$k->id}}/tamu">{{$k->nomor}}</a>
                 </button>
             {{-- @endif --}}
 

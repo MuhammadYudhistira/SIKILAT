@@ -35,18 +35,18 @@ class HomeController extends Controller
             'status' => 'required'
         ]);
 
-        dd($validated);
+        // dd($validated);
 
         Tamu::create($validated);
 
-        return redirect("/transaksi/{kamar}/checkin");
+        return redirect("/transaksi/{$kamar->id}/checkin");
     }
 
     public function checkin(kamar $kamar){
 
         $tamu = Tamu::all();
-        $kamar = Kamar::all();
-
+        // $kamar = Kamar::all();
+        // dd($kamar->tipe->harga);
         return view('transaksi.checkin', compact('kamar', 'tamu'));
     }
 
