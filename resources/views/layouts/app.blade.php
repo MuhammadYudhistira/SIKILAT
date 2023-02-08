@@ -29,6 +29,9 @@
 
     <!-- W3school -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
 
     <!-- data tables -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
@@ -47,6 +50,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.16/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.16/dist/js/uikit-icons.min.js"></script>
 </head>
+
 <body style="background-color: white">
     <div id="app">
         <!-- navbar-side -->
@@ -61,19 +65,21 @@
                 <div class="menu-item" >
                     <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
+
                 <div class="menu-item">
                     <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
                 </div>
-                <div class="menu-item">
-                    <a class="menu-link nav-link  dropdown-toggle " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-bed icon" aria-hidden="true"></i>
-                        Tipe Kamar
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <a class="dropdown-item" href="/tipe" type="button">Tipe Kamar</a>
-                        <a class="dropdown-item" href="/kamar" type="button">Detail kamar</a>
-                    </div>
+
+                <button class=" menu-link nav-link w3-button w3-block w3-left-align" onclick="myAccFunc()">
+                    <i class="fas fa-bed icon" aria-hidden="true"></i>
+                    Tipe Kamar
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="demoAcc" class="w3-hide w3-white w3-card">
+                    <a href="/tipe" class="w3-bar-item w3-button">Tipe Kamar</a> <br>
+                    <a href="/kamar" class="w3-bar-item w3-button">Detail Kamar</a>
                 </div>
+
                 <div class="menu-item">
                     <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i>Laporan</a>
                 </div>
@@ -131,6 +137,20 @@
     <script src="{{ asset('js/navbar.js') }}"></script>
     @yield('script')
 
+    <!-- Script SideBar -->
+    <script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-white";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-white", "");
+  }
+}
+</script>
 
 </body>
 </html>

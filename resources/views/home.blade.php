@@ -45,19 +45,22 @@
     <div class="card-body">
         <!-- dropdown tipe kamar -->
         <div>
-            <button class="btn btn-light dropdown-toggle "  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b style="color:#8C8C8C">Kamar Standar</b>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="" >Kamar Standar</a>
-                <a class="dropdown-item" href="" >Kamar Deluxe</a>
-            </div>
+            <div class="w3-dropdown-hover">
+                <button class="btn btn-light">
+                    <b style="color:#8C8C8C">Kamar Standar</b>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Kamar Standar</a>
+                    <a href="#" class="w3-bar-item w3-button">Kamar Deluxe</a>
+                </div>
+            </div> 
 
-            <!-- <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
+            <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
             <b style="color:#013555">Kamar Kosong</b>
 
             <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:30px; color:#FF5959"></i>
-            <b style="color:#013555">Kamar Terisi</b> -->
+            <b style="color:#013555">Kamar Terisi</b>
         </div>
 
         <br>
