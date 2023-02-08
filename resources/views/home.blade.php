@@ -45,37 +45,70 @@
     <div class="card-body">
         <!-- dropdown tipe kamar -->
         <div>
-            <button class="dropdown-toggle btn btn-light"  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-light dropdown-toggle "  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <b style="color:#8C8C8C">Kamar Standar</b>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <option class="dropdown-item" type="button">Kamar Standar</option>
-                <option class="dropdown-item" type="button">Kamar Deluxe</option>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="" >Kamar Standar</a>
+                <a class="dropdown-item" href="" >Kamar Deluxe</a>
             </div>
-            <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
+
+            <!-- <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
             <b style="color:#013555">Kamar Kosong</b>
 
             <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:30px; color:#FF5959"></i>
-            <b style="color:#013555">Kamar Terisi</b>
+            <b style="color:#013555">Kamar Terisi</b> -->
         </div>
 
         <br>
         <!-- kamar-kamar -->
         @foreach ($kamar as $k)
                 {{-- @if($k->tipe_id == 2) --}}
-                <button style=""
+                <button  data-toggle="modal" data-target="#exampleModalLong"
                 @if($k->status == 1)
                 class="btn btn-db"
                 @else
                 class="btn btn-db" @disabled(true)
                 @endif>
-                {{-- <a href="/transaksi/{{$k->id}}/new"></a> --}}
-                    <a style="font-size:20px" href="/transaksi/{{$k->id}}/tamu">{{$k->nomor}}</a>
+                {{-- <a href=" "></a> --}}
+                    <a style="font-size:20px" >{{$k->nomor}}</a>
                 </button>
-            {{-- @endif --}}
+                {{-- @endif --}}
+
+             <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" >
+                <b class="modal-title" id="exampleModalLongTitle" style=" font-size: 30px; text-align:center ">Kamar {{$k->nomor}}</b>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
+                        <b style="font-size:10px"> 2 Orang </b> 
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
+                        <b style="font-size:10px"> {{$k->tipe->harga}} </b> 
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
+                        <b style="font-size:10px"> 2 Orang </b> 
+                    </button>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                <a type="button" href="/transaksi/{{$k->id}}/tamu"  class="btn btn-primary">Cek In</a>
+            </div>
+            </div>
+        </div>
+        </div>
 
         @endforeach
+       
 
     </div>
 </div>
+          
+        
 @endsection
+
+<!-- pop up kamar -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
