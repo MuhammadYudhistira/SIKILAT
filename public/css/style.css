@@ -1,3 +1,61 @@
+/* Dropdown */
+.nav__dropdown {
+    overflow: hidden;
+    max-height: 30px;
+    transition: .4s ease-in-out;
+  }
+  
+  .nav__dropdown-collapse {
+    background-color: #2a6285;
+    /* background-color: #9fa1a1; */
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .nav__dropdown-content {
+    display: grid;
+    row-gap: .5rem;
+    padding: .75rem 2.5rem .75rem 1.8rem;
+  }
+  
+  .nav__dropdown-item {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    color: white;
+  }
+  
+  .nav__dropdown-item:hover {
+    color: #070ab1;
+  }
+  
+  .nav__dropdown-icon {
+    margin-left: auto;
+    transition: .4s;
+  }
+  
+  /* Show dropdown collapse */
+  .nav__dropdown:hover {
+    max-height: 100%;
+  }
+  
+  /* Rotate icon arrow */
+  .nav__dropdown:hover .nav__dropdown-icon {
+    transform: rotate(180deg);
+  }
+  
+  /*===== Show menu =====*/
+  .show-menu {
+    left: 0;
+  }
+  
+  /*===== Active link =====*/
+  .active {
+    color: var(--first-color);
+  }
+
+/* ----------------------------------------------------------------------------- */
 /* navbar-side */
 .navbar-side {
     width: 230px;
@@ -98,4 +156,17 @@ table, th, td {
 }
 .btn-db:not(:disabled):not(.disabled):active:focus, .btn-db:not(:disabled):not(.disabled).active:focus, .show > .btn-db.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+
+table, th, td {
+  border-style: hidden;
+}
+
+.btn-label {
+  color: #fff;
+  background-color: #2a6285;
+  border-color: #2a6285;
+  width: 65px;
+  height: 65px;
+  margin:10px;
 }

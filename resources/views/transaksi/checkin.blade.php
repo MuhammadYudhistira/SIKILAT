@@ -1,58 +1,86 @@
 @extends('layouts.app')
 
-@section('title', "Daftar Tamu")
+@section('title', "Transaksi || Cek In")
 
-
+@section('bread_crumb')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-5" style="background-color:white">
+        <li class="breadcrumb-item"><a href=" "><i class="fas fa-home mr-2"></i>Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Check In</li>
+    </ol>
+</nav>
+@endsection
 
 @section('content')
+    <div class="card pt-3" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
+        <div class="card-body">
+            <div  align="center" style="margin-bottom:10px">
+                <t style="font-size:30px;">Check In Kamar {{$kamar->nomor}}</t>
+            </div>
 
-<body>
-    <h3>Check-in</h3>
-    <form action="/transaksi/{{$kamar ->id}}/" method="post" class="mb-5">
-        @csrf
-        <div class="mb-3">
-            <label for="customer_id" class="form-label">Tamu :</label>
+            <form action="/transaksi/{{$kamar ->id}}/" method="post" class="mb-5">
+                @csrf
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Nama Tamu</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Nik Tamu</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nik" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Asal Instansi</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Asal instansi" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Nomor HP</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan No HP" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Email</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label" ><t>Jumlah Hari</t></label>
+                    <div class="row">
+                    <div class="col-md-2 col-sm-12" >
+                        <input class="form-control" type="text" name="sumber_vaksin" aria-label="default input example">
+                    </div>
+                    <div class="col-md-1 col-sm-12" >
+                        <div>
+                            <t>Dari</t>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12" >
+                        <input type="date" id="date">
+                    </div>
+                    <div class="col-md-1 col-sm-12" >
+                        <div>
+                            <t>Sampai</t>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12" >
+                        <input type="date" id="date">
+                    </div>
+                </div>
 
-            <select class="form-select" aria-label="Default select example" id="tipe_id" name="tipe_id">
-                <option hidden>Pilih Nama Tamu</option>
-                @foreach ($tamu as $t)
-                <option value="{{ $t->id }}">{{ $t->nama }}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="nama" class="form-label">Kamar :</label>
-            <input type="text" class="form-control" id="kamar_id" value="{{$kamar->nomor}}" disabled>
-            <input type="text" class="form-control" id="kamar_id" name="kamar_id" value="{{$kamar->id}}" hidden>
-        </div>
-
-        <div class="mb-3">
-            <label for="status" class="form-label" >Tanggal Masuk :</label>
-
-            <input type="text" class="form-control" id="status" placeholder="Masukkan harga produk" name="alamat" required>
-        </div>
-        <div class="mb-3">
-            <label for="status" class="form-label" >Tanggal Keluar :</label>
-
-            <input type="text" class="form-control" id="status" placeholder="Masukkan harga produk" name="alamat" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="status" class="form-label" >Jumlah Hari :</label>
-
-            <input type="text" class="form-control" id="status" placeholder="Masukkan harga produk" name="quantity" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="maksimal" class="form-label">Total Harga : </label>
-            <input type="number" class="form-control" id="maksimal" placeholder="Masukkan harga produk" name="total" value="{{$kamar->tipe->harga}}" required disabled>
-        </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="maksimal" class="form-label"> <t>Harga</t></label>
+                    <input type="number" class="form-control" id="maksimal" name="total" value="{{$kamar->tipe->harga}}" required disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="maksimal" class="form-label"> <t>Total Harga</t></label>
+                    <input type="number" class="form-control" id="maksimal" name="total" value=" " required disabled>
+                </div>
 
 
         <div class="mb-3">
             <button type="submit" class="btn btn-success px-3">Kirim</button>
         </div>
     </form>
-</body>
-</html>
+        </div>
+    </div>
+
 @endsection

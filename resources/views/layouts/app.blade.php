@@ -54,7 +54,7 @@
 <body style="background-color: white">
     <div id="app">
         <!-- navbar-side -->
-        <nav class="navbar-side" id="navbar-side" style=" background-color: #013555">
+        <nav class="navbar-side" id="navbar-side" style=" background-color: #013555;">
             <div class="text-center mt-3" style="width:40px; ">
                 <a href="">
                     <img src="{{ asset('img/logobpsdm.png') }}" alt="logo BPSDM" class="logo" style="margin-left:20px">
@@ -63,28 +63,32 @@
             </div>
             <div class="menu-list mt-3 pt-3">
                 <div class="menu-item" >
-                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
+                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
                 </div>
 
                 <div class="menu-item">
-                    <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
+                    <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i><b>Data Tamu</b></a>
                 </div>
-
-                <button class=" menu-link nav-link w3-button w3-block w3-left-align" onclick="myAccFunc()">
-                    <i class="fas fa-bed icon" aria-hidden="true"></i>
-                    Tipe Kamar
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div id="demoAcc" class="w3-hide w3-white w3-card">
-                    <a href="/tipe" class="w3-bar-item w3-button">Tipe Kamar</a> <br>
-                    <a href="/kamar" class="w3-bar-item w3-button">Detail Kamar</a>
-                </div>
-
+                
                 <div class="menu-item">
-                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i>Laporan</a>
+                    <div class="nav__dropdown">
+                        <a href="#" class="menu-link nav_link" style="margin-left: 20px; " >
+                            <i class="fas fa-bed icon" aria-hidden="true"></i>
+                            <span class="nav__name"><b>Kelola Kamar</b></span>
+                            <i class="fa fa-caret-down" style="margin-left:45px"></i>
+                        </a>
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="/tipe" class="nav__dropdown-item">Tipe Kamar</a>
+                                <a href="/kamar" class="nav__dropdown-item">Detail Kamar</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
+                <div class="menu-item" style="margin-top: 10px">
+                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
+                </div>
             </div>
             <div class="logout mt-3 text-center">
                 <form action="/auth/logout" method="get">
@@ -152,5 +156,38 @@ function myAccFunc() {
 }
 </script>
 
+<!-- script submenu sidebar bootstrap -->
+<script>
+  // Hide submenus
+$('#body-row .collapse').collapse('hide'); 
+
+// Collapse/Expand icon
+$('#collapse-icon').addClass('fa-angle-double-left'); 
+
+// Collapse click
+$('[data-toggle=sidebar-colapse]').click(function() {
+    SidebarCollapse();
+});
+
+function SidebarCollapse () {
+    $('.menu-collapsed').toggleClass('d-none');
+    $('.sidebar-submenu').toggleClass('d-none');
+    $('.submenu-icon').toggleClass('d-none');
+    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+    
+    // Treating d-flex/d-none on separators with title
+    var SeparatorTitle = $('.sidebar-separator-title');
+    if ( SeparatorTitle.hasClass('d-flex') ) {
+        SeparatorTitle.removeClass('d-flex');
+    } else {
+        SeparatorTitle.addClass('d-flex');
+    }
+    
+    // Collapse/Expand icon
+    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+}
+
+
+</script>
 </body>
 </html>

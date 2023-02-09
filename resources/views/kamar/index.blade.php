@@ -5,7 +5,6 @@
 
 
 @section('content')
-<body>
     <h3>Daftar Kamar</h3>
     <button><a href="/kamar/create">Tambah Kamar</a></button> <br><br>
     <table class="table  table-bordered border-dark table-hover">
@@ -45,6 +44,4 @@
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
 @endsection

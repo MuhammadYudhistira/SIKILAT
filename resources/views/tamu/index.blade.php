@@ -1,12 +1,20 @@
 @extends('layouts.app')
 
-@section('title', "Tipe Kamar")
+@section('title', "Daftar Tamu")
 
-
+@section('bread_crumb')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-5" style="background-color:white">
+        <li class="breadcrumb-item active" aria-current="page" style="margin-top:5px">
+            <i class="fas fa-users mr-2" style="color:black"></i>
+            <b style="font-size:20px; color:black">Daftar Tamu</b>
+        </li>
+    </ol>
+</nav>
+@endsection
 
 @section('content')
 <body>
-    <h3>Daftar Tamu</h3>
     {{-- <button><a href="/tipe/create">Tambah Tipe Kamar</a></button> <br><br> --}}
     <div  class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <table class="table  table-bordered  table-hover" style="width:100%;background-color: white">
