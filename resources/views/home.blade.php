@@ -51,10 +51,12 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="w3-dropdown-content w3-bar-block">
-                    <a href="#" class="w3-bar-item w3-button">Kamar Standar</a>
-                    <a href="#" class="w3-bar-item w3-button">Kamar Deluxe</a>
+                    @foreach ($tipe as $t)
+                    <a href="#" class="w3-bar-item w3-button">Kamar {{$t->nama}}</a>
+                    @endforeach
+
                 </div>
-            </div> 
+            </div>
 
             <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
             <b style="color:#013555">Kamar Kosong</b>
@@ -84,21 +86,21 @@
                 <div class="modal-content"  align="center" style="background-color:#013555">
                     <b class="modal-title" id="exampleModalLongTitle" style="color:white; font-size: 30px; text-align:center ">Kamar {{$k->nomor}}</b>
                     <div>
-                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
-                            <b style="font-size:10px"> 2 Orang </b> 
+                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
+                            <b style="font-size:10px"> {{$k->maksimal}} Orang </b>
                         </button>
-                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
-                            <b style="font-size:10px"> {{$k->tipe->harga}} </b> 
+                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
+                            <b style="font-size:10px"> {{$k->tipe->harga}} </b>
                         </button>
-                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px"> 
-                            <b style="font-size:10px"> 2 Orang </b> 
+                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
+                            <b style="font-size:10px"> 2 Orang </b>
                         </button>
                     </div>
                     <br><br>
                     <div style="margin-bottom:10px; ">
                         <button type="button" class="btn btn-secondary" style="margin-right:200px; width:100px; font-size:15px" data-dismiss="modal"><b>Kembali</b> </button>
                         <a type="button" href="/transaksi/{{$k->id}}/checkin" style="width:100px;font-size:15px"   class="btn btn-primary"><b>Cek In</b> </a>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

@@ -19,8 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/transaksi/{kamar}/tamu', [HomeController::class, 'create']);
-Route::get('/transaksi/{kamar}/checkin', [HomeController::class, 'checkin']);
+Route::get('/transaksi/{kamar}/checkin', [HomeController::class, 'create']);
 Route::post('/transaksi/{kamar}/', [HomeController::class, 'store']);
 
 

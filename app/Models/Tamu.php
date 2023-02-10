@@ -12,6 +12,6 @@ class Tamu extends Model
     protected $guarded = ["id"];
 
     public function Transaksi(){
-        return $this->hasMany(Transaksi::class);
+        return $this->belongsTo(Transaksi::class);
     }
 }

@@ -20,39 +20,43 @@
 
             <form action="/transaksi/{{$kamar ->id}}/" method="post" class="mb-5">
                 @csrf
+                <div class="mb-3" hidden>
+                    <label for="status" class="form-label" ><t>id_kamar</t></label>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="kamar_id" value="{{$kamar->id}}" required>
+                </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nama Tamu</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="nama" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nik Tamu</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan nik" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nik" name="nik" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Asal Instansi</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan Asal instansi" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Asal instansi" name="instansi" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nomor HP</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan No HP" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan No HP" name="nohp" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Email</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan Email" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Email" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Jumlah Hari</t></label>
                     <div class="row">
-                    <div class="col-md-2 col-sm-12" >
-                        <input class="form-control" type="text" name="sumber_vaksin" aria-label="default input example">
-                    </div>
+                    {{-- <div class="col-md-2 col-sm-12" >
+                        <input class="form-control" type="text" aria-label="default input example">
+                    </div> --}}
                     <div class="col-md-1 col-sm-12" >
                         <div>
                             <t>Dari</t>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12" >
-                        <input type="date" id="date">
+                        <input type="date" id="date" name="tanggal_masuk">
                     </div>
                     <div class="col-md-1 col-sm-12" >
                         <div>
@@ -60,21 +64,20 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12" >
-                        <input type="date" id="date">
+                        <input type="date" id="date" name="tanggal_keluar">
                     </div>
                 </div>
 
                 </div>
-                
-                <div class="mb-3">
+
+                {{-- <div class="mb-3">
                     <label for="maksimal" class="form-label"> <t>Harga</t></label>
                     <input type="number" class="form-control" id="maksimal" name="total" value="{{$kamar->tipe->harga}}" required disabled>
                 </div>
                 <div class="mb-3">
                     <label for="maksimal" class="form-label"> <t>Total Harga</t></label>
                     <input type="number" class="form-control" id="maksimal" name="total" value=" " required disabled>
-                </div>
-
+                </div> --}}
 
         <div class="mb-3">
             <button type="submit" class="btn btn-success px-3">Kirim</button>

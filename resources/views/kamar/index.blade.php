@@ -23,8 +23,8 @@
             <tr>
                 <td class="text-center">{{ $loop->iteration }}.</td>
                 <td class="text-center">{{ $k->nomor }}</td>
-                <td class="text-center">{{ $k->tipe->nama }}</td>
                 <td class="text-center">Rp.{{ $k->tipe->harga }}</td>
+                <td class="text-center">{{ $k->tipe->nama }}</td>
                 <td class="text-center">{{ $k->maksimal}}</td>
                 <td class="text-center">
 

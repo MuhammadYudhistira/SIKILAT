@@ -15,7 +15,7 @@ class Transaksi extends Model
         return $this->belongsTo(Kamar::class);
     }
     public function Tamu(){
-        return $this->belongsTo(Tamu::class);
+        return $this->hasMany(Tamu::class);
     }
     public function Laporan(){
         return $this->hasMany(Laporan::class);
