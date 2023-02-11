@@ -56,7 +56,8 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12" >
-                        <input type="date" id="date" name="tanggal_masuk">
+                        <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" disabled>
+                        <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" hidden>
                     </div>
                     <div class="col-md-1 col-sm-12" >
                         <div>

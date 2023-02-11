@@ -3,6 +3,7 @@
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\TamuController;
 use App\Http\Controllers\TipeController;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,8 @@ Route::get('/tamu', [TamuController::class, 'index']);
 Route::get('/tamu/{tamu}/detail', [TamuController::class, 'detail']);
 Route::get('/tamu/{tamu}/checkout', [TamuController::class, 'checkout']);
 Route::get('/tamu/{tamu}/destroy', [TamuController::class, 'destroy']);
+
+Route::get('/laporan', [LaporanController::class, 'index']);
 
 
 Route::get('/home', [HomeController::class, 'index']);

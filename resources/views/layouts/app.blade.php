@@ -69,7 +69,7 @@
                 <div class="menu-item">
                     <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i><b>Data Tamu</b></a>
                 </div>
-                
+
                 <div class="menu-item">
                     <div class="nav__dropdown">
                         <a href="#" class="menu-link nav_link" style="margin-left: 20px; " >
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="menu-item" style="margin-top: 10px">
-                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
+                    <a href="/laporan" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
                 </div>
             </div>
             <div class="logout mt-3 text-center">
@@ -148,9 +148,9 @@ function myAccFunc() {
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-white";
-  } else { 
+  } else {
     x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
+    x.previousElementSibling.className =
     x.previousElementSibling.className.replace(" w3-white", "");
   }
 }
@@ -159,10 +159,10 @@ function myAccFunc() {
 <!-- script submenu sidebar bootstrap -->
 <script>
   // Hide submenus
-$('#body-row .collapse').collapse('hide'); 
+$('#body-row .collapse').collapse('hide');
 
 // Collapse/Expand icon
-$('#collapse-icon').addClass('fa-angle-double-left'); 
+$('#collapse-icon').addClass('fa-angle-double-left');
 
 // Collapse click
 $('[data-toggle=sidebar-colapse]').click(function() {
@@ -174,7 +174,7 @@ function SidebarCollapse () {
     $('.sidebar-submenu').toggleClass('d-none');
     $('.submenu-icon').toggleClass('d-none');
     $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
+
     // Treating d-flex/d-none on separators with title
     var SeparatorTitle = $('.sidebar-separator-title');
     if ( SeparatorTitle.hasClass('d-flex') ) {
@@ -182,7 +182,7 @@ function SidebarCollapse () {
     } else {
         SeparatorTitle.addClass('d-flex');
     }
-    
+
     // Collapse/Expand icon
     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
 }
