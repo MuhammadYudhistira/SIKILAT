@@ -63,7 +63,7 @@
             </div>
             <div class="menu-list mt-3 pt-3">
                 <div class="menu-item" >
-                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
+                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
                 </div>
 
                 <div class="menu-item">
@@ -91,7 +91,8 @@
                 </div>
             </div>
             <div class="logout mt-3 text-center">
-                <form action="/auth/logout" method="get">
+                <form action="/auth/logout" method="post">
+                    @csrf
                     <button type="submit" class="btn btn-primary px-5">Logout</button>
                 </form>
             </div>
@@ -108,7 +109,7 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto" >
-                    <span>Hello, i'm Saskeh</span>
+                    <span>Hello, I'm {{auth()->user()->name}}</span>
                 </ul>
             </div>
         </nav>
