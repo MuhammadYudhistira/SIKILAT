@@ -48,11 +48,15 @@ class HomeController extends Controller
 
         $kamar = Kamar::find($validated["kamar_id"]);
 
-        if($kamar->maksimal >= 1){
+
         $kamar->update([
             "maksimal"=> $kamar->maksimal - 1,
-            "status"=> 2
         ]);
+
+        if($kamar->maksimal == 0){
+            $kamar->update([
+                "status"=> 2
+            ]);
         }
 
 
@@ -62,9 +66,18 @@ class HomeController extends Controller
         $validated["quantity"] = $toDate->diffInDays($fromDate);
         $validated["total"] = $validated["quantity"] * $kamar->tipe->harga;
 
-        dd($validated, $kamar);
 
-        Transaksi::create($validated);
+
+        $transaksi = Transaksi::create($validated);
+
+        $tamu = Tamu::create([
+            "transaksi_id" => $transaksi->id
+        ]);
+
+        // $transaksi;
+        // $tamu;
+
+        // dd($validated, $kamar, $tamu);
 
         return redirect("/tamu");
     }

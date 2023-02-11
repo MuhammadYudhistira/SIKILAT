@@ -42,6 +42,9 @@ Route::put('/tipe/{tipe}', [TipeController::class, 'update']);
 Route::get('/tipe/{tipe}/edit', [TipeController::class, 'edit']);
 
 Route::get('/tamu', [TamuController::class, 'index']);
+Route::get('/tamu/{tamu}/detail', [TamuController::class, 'detail']);
+Route::get('/tamu/{tamu}/checkout', [TamuController::class, 'checkout']);
+Route::get('/tamu/{tamu}/destroy', [TamuController::class, 'destroy']);
 
 
 Route::get('/home', [HomeController::class, 'index']);
