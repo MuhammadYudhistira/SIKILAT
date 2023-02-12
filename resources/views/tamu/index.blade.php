@@ -17,23 +17,118 @@
 <body>
     {{-- <button><a href="/tipe/create">Tambah Tipe Kamar</a></button> <br><br> --}}
     <div  class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-    <table class="table  table-bordered  table-hover" style="width:100%;background-color: white">
-        <thead>
-            <tr class="bg-secondary text-center" scope="col" class="">
-                <th style="width:5%">No.</th>
-                <th style="width:30%">Nama</th>
-                <th style="width:15%">Alamat</th>
-                <th style="width:10%">No.HP</th>
-                <th style="width:25%">Status</th>
-                {{-- <th style="width:25%">Aksi</th> --}}
-            </tr>
-        </thead>
-        <tbody>
+        <div>
+            <b style="font-size:25px">Data Tamu</b><br>
+            <a>Data dibawah ini adalah data tamu yang sudah melakukan check in</a>
+            <br>
+            <br>
+            <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." style="width:200px; height:30px">
+            <table id="myTable" class="table table-bordered dt-responsive nowrap" style="width:100%">
+                <thead>
+                    <tr class=" text-center " scope="col" style="font-size:16px;color:white; background-color: #013555; padding: 100px;">
+                        <th style="width:5%; ">No.</th>
+                        <th style="width:25%">Nama Tamu</th>
+                        <th style="width:15%">Tipe Kamar</th>
+                        <th style="width:15%">Tanggal Cek In</th>
+                        <th style="width:15%">Tanggal Cek Out</th>
+                        <th style="width:25%">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>rererere</td>
+                        <td>standar</td>
+                        <td>123456</td>
+                        <td>34567890</td>
+                        <td>
+                            <a type="button" href=" " style="padding:2px; width:95px;height:30px; border-radius:10px"   class="btn btn-danger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"/>
+                                </svg>    
+                                <b style="font-size:15px;">Cek Out</b> 
+                            </a>
+                            <a type="button" href=" " style="padding:2px; width:95px;height:30px; border-radius:10px"   class="btn btn-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
+                                    <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                </svg>    
+                                <b style="font-size:15px;">Lihat</b> 
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>qweqeqwre</td>
+                        <td>standar</td>
+                        <td>123456</td>
+                        <td>9876540</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>fgfhff</td>
+                        <td>standar</td>
+                        <td>123456</td>
+                        <td>34567890</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>xbxvc</td>
+                        <td>standar</td>
+                        <td>123456</td>
+                        <td>34567890</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- script tabel -->
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<!-- <script>
+    $(document).ready(function () {
+  $('#dtBasicExample').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+}); -->
+</script>
+
+</body>
+</html>
+@endsection
+
+
+        <!-- <tbody>
             @foreach ($tamu as $t)
             <tr class="text-center">
                 <td>{{ $loop->iteration }}.</td>
                 <td>{{ $t->nama }}</td>
-                <td>{{ $t->alamat }}</td>
+                <td>Standar</td>
                 <td>{{ $t->nohp }}</td>
                 <td>{{ $t->status }}</td>
                 {{-- <td>
@@ -52,10 +147,4 @@
                 </td> --}}
             </tr>
             @endforeach
-        </tbody>
-    </table>
-    </div>
-
-</body>
-</html>
-@endsection
+        </tbody> -->

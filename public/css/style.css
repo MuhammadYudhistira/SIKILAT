@@ -58,7 +58,7 @@
 /* ----------------------------------------------------------------------------- */
 /* navbar-side */
 .navbar-side {
-    width: 230px;
+    width: 220px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -89,7 +89,7 @@
 
 /* navbar-top */
 .navbar-top {
-    margin-left: 230px !important;
+    margin-left: 220px !important;
     transition: all 0.6s ease-in;
 }
 
@@ -170,3 +170,56 @@ table, th, td {
   height: 65px;
   margin:10px;
 }
+
+/* css tabel */
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 15px; /* Increase font-size */
+}
+
+ #myTable td {
+  text-align: center; /* Left-align text */
+  padding: 5px; /* Add padding */
+}
+
+#myTable th{
+  text-align: center; /* Left-align text */
+  padding: 15px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+/* table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+} */

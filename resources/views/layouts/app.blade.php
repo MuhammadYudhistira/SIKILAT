@@ -26,6 +26,9 @@
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap4.min.css"> -->
 
     <!-- W3school -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,26 +58,26 @@
     <div id="app">
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555;">
-            <div class="text-center mt-3" style="width:40px; ">
-                <a href="">
+            <div class="text-center mt-1" style="width:40px; ">
+                <a href="" align="center">
                     <img src="{{ asset('img/logobpsdm.png') }}" alt="logo BPSDM" class="logo" style="margin-left:20px">
 
                 </a>
             </div>
-            <div class="menu-list mt-3 pt-3">
+            <div class="menu-list  pt-3">
                 <div class="menu-item" >
-                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
+                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
 
                 <div class="menu-item">
-                    <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i><b>Data Tamu</b></a>
+                    <a href="/tamu" class="menu-link nav-link "><i class="fas fa-users icon"></i>Data Tamu</a>
                 </div>
                 
                 <div class="menu-item">
                     <div class="nav__dropdown">
                         <a href="#" class="menu-link nav_link" style="margin-left: 20px; " >
                             <i class="fas fa-bed icon" aria-hidden="true"></i>
-                            <span class="nav__name"><b>Kelola Kamar</b></span>
+                            <span class="nav__name">Kelola Kamar</span>
                             <i class="fa fa-caret-down" style="margin-left:45px"></i>
                         </a>
                         <div class="nav__dropdown-collapse">
@@ -86,13 +89,19 @@
                     </div>
                 </div>
 
-                <div class="menu-item" style="margin-top: 10px">
-                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
+                <div class="menu-item" style="margin-top: 10px; font-size: 20px">
+                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i>Laporan</a>
                 </div>
             </div>
             <div class="logout mt-3 text-center">
                 <form action="/auth/logout" method="get">
-                    <button type="submit" class="btn btn-primary px-5">Logout</button>
+                    <button type="submit" class="btn btn-danger px-5" style="margin-top:200px; ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
+                    <b>Logout</b>
+                    </button>
                 </form>
             </div>
         </nav>
