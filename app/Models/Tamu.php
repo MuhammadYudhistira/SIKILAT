@@ -11,6 +11,14 @@ class Tamu extends Model
     protected $table = "tamu";
     protected $guarded = ["id"];
 
+    public function scopeFilter($query, array $filters){
+
+        $query->when($filters['search'] ?? false, function ($query, $search){
+            return $query->where('nama', 'like', '%'. $search . '%');
+        });
+
+    }
+
     public function Transaksi(){
         return $this->belongsTo(Transaksi::class);
     }

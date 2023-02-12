@@ -9,9 +9,11 @@ use Illuminate\Http\Request;
 class TamuController extends Controller
 {
     public function index(){
-        $tamu = Tamu::all();
 
-        return view('tamu.index', compact('tamu'));
+        return view('tamu.index',[
+            "tamu" => Tamu::latest()->filter(request(['search']))->get()
+        ]);
+
     }
 
     public function detail(Tamu $tamu){
