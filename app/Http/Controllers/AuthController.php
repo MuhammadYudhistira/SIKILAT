@@ -11,32 +11,32 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request){
+    public function authenticate(Request $request){
         $validated = $request->validate([
-            'email'=>'required',
+            'email'=>'required|email:dns',
             'password'=>'required'
         ]);
 
         // dd($validated);
 
-        $infologin = [
-            'email'=>$request->email,
-            'password'=>$request->password
-        ];
-
         //if sukses
-        if(Auth::attempt($infologin)){
+        if(Auth::attempt($validated)){
 
-            // return 'sukses';
-            return redirect('/kamar');
-        }else{
+            $request->session()->regenerate();
 
-            return redirect ('/auth/login');
+            return redirect()->intended('/');
         }
+
+        return back()->with('loginError', 'Login tidak berhasil');
     }
 
     public function logout(){
         Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
         return redirect('/auth/login');
     }
 }

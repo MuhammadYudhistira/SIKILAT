@@ -24,7 +24,7 @@
                 <th style="width:5%">No.</th>
                 <th style="width:30%">Nama</th>
                 <th style="width:15%">Harga</th>
-                <th style="width:10%">Jumlah Kamar</th>
+                {{-- <th style="width:10%">Jumlah Kamar</th> --}}
                 <th style="width:25%">Aksi</th>
             </tr>
         </thead>
@@ -34,7 +34,7 @@
                 <td>{{ $loop->iteration }}.</td>
                 <td>{{ $t->nama }}</td>
                 <td>Rp.{{ $t->harga }}</td>
-                <td>{{$count}}</td>
+                {{-- <td>{{$count}}</td> --}}
                 <td>
 
                     <a href="/tipe/{{ $t->id }}/edit" class="btn btn-warning">

@@ -5,9 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
-class UserSeeders extends Seeder
+class TipeSeeders extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +15,14 @@ class UserSeeders extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'Yudhis',
-            'email' => 'yudhis@gmail.com',
-            'password' =>Hash::make('123123')
+        DB::table('tipe_kamar')->insert([
+            'nama' => 'Standard',
+            'harga' => '100000'
+        ]);
+
+        DB::table('tipe_kamar')->insert([
+            'nama' => 'Deluxe',
+            'harga' => '200000'
         ]);
     }
 }

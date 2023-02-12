@@ -15,34 +15,33 @@
     <div class="card pt-3" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
         <div class="card-body">
             <div  align="center" style="margin-bottom:10px">
-                <t style="font-size:30px;">Check In Kamar {{$kamar->nomor}}</t>
+                <t style="font-size:30px;">Checkout Kamar {{$tamu->Transaksi->kamar->nomor}}</t>
             </div>
 
-            <form action="/transaksi/{{$kamar ->id}}/" method="post" class="mb-5">
-                @csrf
+            <form action="" method="get" class="mb-5">
                 <div class="mb-3" hidden>
                     <label for="status" class="form-label" ><t>id_kamar</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="kamar_id" value="{{$kamar->id}}" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="kamar_id" value="" required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nama Tamu</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="nama" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="nama" value="{{$tamu->Transaksi->nama}}" disabled required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nik Tamu</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan nik" name="nik" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan nik" name="nik" value="{{$tamu->Transaksi->nik}}" disabled required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Asal Instansi</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan Asal instansi" name="instansi" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Asal instansi" name="instansi" value="{{$tamu->Transaksi->instansi}}" disabled required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Nomor HP</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan No HP" name="nohp" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan No HP" name="nohp" value="{{$tamu->Transaksi->nohp}}" disabled required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Email</t></label>
-                    <input type="text" class="form-control" id="status" placeholder="Masukkan Email" name="email" required>
+                    <input type="text" class="form-control" id="status" placeholder="Masukkan Email" name="email" value="{{$tamu->Transaksi->email}}" disabled required>
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Jumlah Hari</t></label>
@@ -56,8 +55,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12" >
-                        <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" disabled>
-                        <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" hidden>
+                        <input type="date" id="date" name="tanggal_masuk" value="{{$tamu->Transaksi->tanggal_masuk}}" disabled required>
                     </div>
                     <div class="col-md-1 col-sm-12" >
                         <div>
@@ -65,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12" >
-                        <input type="date" id="date" name="tanggal_keluar">
+                        <input type="date" id="date" name="tanggal_keluar" value="{{$tamu->Transaksi->tanggal_keluar}}" disabled required>
                     </div>
                 </div>
 
@@ -74,14 +72,14 @@
                 {{-- <div class="mb-3">
                     <label for="maksimal" class="form-label"> <t>Harga</t></label>
                     <input type="number" class="form-control" id="maksimal" name="total" value="{{$kamar->tipe->harga}}" required disabled>
-                </div>
+                </div> --}}
                 <div class="mb-3">
                     <label for="maksimal" class="form-label"> <t>Total Harga</t></label>
-                    <input type="number" class="form-control" id="maksimal" name="total" value="" required disabled>
-                </div> --}}
+                    <input type="number" class="form-control" id="maksimal" name="total" value="{{$tamu->Transaksi->total}}" required disabled>
+                </div>
 
         <div class="mb-3">
-            <button type="submit" class="btn btn-success px-3">Kirim</button>
+            <a href="/tamu/{{$tamu->id}}/destroy" class="btn btn-danger px-3">Checkout</a>
         </div>
     </form>
         </div>

@@ -15,14 +15,18 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("tamu_id");
             $table->unsignedBigInteger("kamar_id");
+            $table->string("nama");
+            $table->string("nik");
+            $table->string("instansi");
+            $table->string("nohp");
+            $table->string("email");
+            $table->date("tanggal_masuk");
+            $table->date("tanggal_keluar");
             $table->integer("quantity");
             $table->integer("total");
-            $table->dateTime("tanggal");
             $table->timestamps();
 
-            $table->foreign("tamu_id")->references("id")->on("tamu")->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreign("kamar_id")->references("id")->on("kamar")->cascadeOnUpdate()->cascadeOnDelete();
         });
     }

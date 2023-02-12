@@ -4,50 +4,82 @@ namespace App\Http\Controllers;
 
 use App\Models\Kamar;
 use App\Models\Tamu;
+use App\Models\Tipe;
+use App\Models\Transaksi;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Builder\Trait_;
 
 class HomeController extends Controller
 {
     public function index(){
 
         $kamar = Kamar::all();
+        $tipe = Tipe::all();
 
         $count = Kamar::where('status', 1)->count();
         $countisi = Kamar::where('status', 2)->count();
 
         // dd($count);
-        return view('home', compact('kamar', 'count','countisi'));
+        return view('home', compact('kamar', 'count','countisi', 'tipe'));
     }
 
     public function create(kamar $kamar){
         // $kamar = Kamar::all();
 
-        return view('transaksi.create', compact('kamar'));
+        return view('transaksi.checkin', compact('kamar'));
     }
 
     public function store(kamar $kamar, Request $request){
 
         $validated = $request->validate([
+            'kamar_id' => 'required',
             'nama' => 'required',
-            'alamat' => 'required',
+            'nik' => 'required',
+            'instansi' => 'required',
             'nohp' => 'required',
-            'status' => 'required'
+            'email' => 'required',
+            'tanggal_masuk' => 'required',
+            'tanggal_keluar' => 'required',
+            // 'quantity' => 'required|min:1',
+            // 'total' => 'required|min:1',
         ]);
 
-        // dd($validated);
+        $kamar = Kamar::find($validated["kamar_id"]);
 
-        Tamu::create($validated);
 
-        return redirect("/transaksi/{$kamar->id}/checkin");
-    }
+        $kamar->update([
+            "maksimal"=> $kamar->maksimal - 1,
+        ]);
 
-    public function checkin(kamar $kamar){
+        if($kamar->maksimal == 0){
+            $kamar->update([
+                "status"=> 2
+            ]);
+        }
 
-        $tamu = Tamu::all();
-        // $kamar = Kamar::all();
-        // dd($kamar->tipe->harga);
-        return view('transaksi.checkin', compact('kamar', 'tamu'));
+
+        $toDate = Carbon::parse($validated["tanggal_keluar"]);
+        $fromDate = Carbon::parse($validated["tanggal_masuk"]);
+
+        $validated["quantity"] = $toDate->diffInDays($fromDate);
+        $validated["total"] = $validated["quantity"] * $kamar->tipe->harga;
+
+
+
+        $transaksi = Transaksi::create($validated);
+
+        $tamu = Tamu::create([
+            "transaksi_id" => $transaksi->id
+        ]);
+
+        // $transaksi;
+        // $tamu;
+
+        // dd($validated, $kamar, $tamu);
+
+        return redirect("/tamu");
     }
 
 }
