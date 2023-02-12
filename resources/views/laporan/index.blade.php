@@ -19,10 +19,10 @@
     <div class="row">
         <div class="col-md-3">
             <form action="/laporan">
-                <div class="col-md-3 col-sm-12" >
+                {{-- <div class="col-md-3 col-sm-12" >
                     <input type="date" id="date" name="tanggal_masuk">
-                    {{-- <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" hidden> --}}
-                </div>
+                    <input type="date" id="date" name="tanggal_masuk" value="{{ now()->format('Y-m-d') }}" hidden>
+                </div> --}}
                 <div class="input-group mb-3 align-self-lg-center">
                     <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
                     <button class="btn btn-success " type="submit">Search</button>

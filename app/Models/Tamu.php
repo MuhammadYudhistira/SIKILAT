@@ -14,7 +14,7 @@ class Tamu extends Model
     public function scopeFilter($query, array $filters){
 
         $query->when($filters['search'] ?? false, function ($query, $search){
-            return $query->where('nama', 'like', '%'. $search . '%');
+            return $query->where('transaksi_id', 'like', '%'. $search . '%');
         });
 
     }

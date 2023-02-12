@@ -18,7 +18,7 @@
     {{-- Search Form --}}
     <div class="row">
         <div class="col-md-3">
-            <form action="/laporan">
+            <form action="/tamu">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
                     <button class="btn btn-success " type="submit">Search</button>

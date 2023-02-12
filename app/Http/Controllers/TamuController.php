@@ -10,6 +10,8 @@ class TamuController extends Controller
 {
     public function index(){
 
+        // dd(request("search"));
+
         return view('tamu.index',[
             "tamu" => Tamu::latest()->filter(request(['search']))->get()
         ]);
