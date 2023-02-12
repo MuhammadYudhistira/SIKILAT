@@ -15,7 +15,7 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $kamar = Kamar::oldest();
+        $kamar = Kamar::orderBy('nomor');
         $tipe = Tipe::all();
 
         // dd($tipe);
