@@ -15,14 +15,24 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $kamar = Kamar::all();
+        $kamar = Kamar::oldest();
         $tipe = Tipe::all();
+
+        // dd($tipe);
+        if(request('search')){
+            $kamar->where('tipe_id', 'like', '%'. request('search'). '%');
+        }
 
         $count = Kamar::where('status', 1)->count();
         $countisi = Kamar::where('status', 2)->count();
 
         // dd($count);
-        return view('home', compact('kamar', 'count','countisi', 'tipe'));
+        return view('home', [
+            "tipe"=> $tipe,
+            "kamar"=>$kamar->get(),
+            "count"=>$count,
+            "countisi"=>$countisi
+        ]);
     }
 
     public function create(kamar $kamar){

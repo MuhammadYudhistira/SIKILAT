@@ -12,5 +12,6 @@ class LaporanController extends Controller
         return view('laporan.index',[
             "transaksi" => Transaksi::latest()->filter(request(['search']))->get()
         ]);
+
     }
 }

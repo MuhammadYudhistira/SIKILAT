@@ -26,8 +26,8 @@
                 <div class="input-group mb-3 align-self-lg-center">
                     <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
                     <button class="btn btn-success " type="submit">Search</button>
-
                 </div>
+
             </form>
         </div>
     </div>

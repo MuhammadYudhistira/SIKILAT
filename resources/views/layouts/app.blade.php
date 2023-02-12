@@ -66,7 +66,7 @@
             </div>
             <div class="menu-list  pt-3">
                 <div class="menu-item" >
-                    <a href="/home" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
+                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
                 </div>
 
                 <div class="menu-item">
@@ -90,11 +90,12 @@
                 </div>
 
                 <div class="menu-item" style="margin-top: 10px">
-                    <a href="" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
+                    <a href="/laporan" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
                 </div>
             </div>
             <div class="logout mt-3 text-center">
-                <form action="/auth/logout" method="get">
+                <form action="/auth/logout" method="POST">
+                    @csrf
                     <button type="submit" class="btn btn-primary px-5">Logout</button>
                 </form>
             </div>

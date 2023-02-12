@@ -45,18 +45,35 @@
     <div class="card-body">
         <!-- dropdown tipe kamar -->
         <div>
-            <div class="w3-dropdown-hover">
-                <button class="btn btn-light">
+
+            {{-- <div class="w3-dropdown-hover">
+                <div class="btn btn-light">
                     <b style="color:#8C8C8C">Kamar Standar</b>
                     <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="w3-dropdown-content w3-bar-block">
-                    @foreach ($tipe as $t)
-                    <a href="#" class="w3-bar-item w3-button">Kamar {{$t->nama}}</a>
-                    @endforeach
-
                 </div>
-            </div>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <form action="/">
+                    @foreach ($tipe as $t)
+                    <input type="text" class="form-control" {{$t->nama}}" name="search" value="{{$t->nama}}">
+                    @endforeach
+                    <button class="w3-bar-item w3-button" type="submit">Kamar {{$t->nama}}</button>
+                    </form>
+                </div>
+            </div> --}}
+            <form action="/">
+            <div class="w3-dropdown-hover">
+                    <select class="form-select" name="search">
+                        <div class="w3-dropdown-content w3-bar-block">
+                        {{-- <option hidden >{{request('search')}}</option> --}}
+                        <option value="">All</option>
+                        @foreach ($tipe as $t)
+                        <option value="{{$t->id}}">{{$t->nama}}</option>
+                        @endforeach
+                        </div>
+                    </select>
+                </div>
+                <button class="btn btn-success " type="submit">Search</button>
+            </form>
 
             <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
             <b style="color:#013555">Kamar Kosong</b>
