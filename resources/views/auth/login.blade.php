@@ -27,7 +27,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card py-5">
-                    <div class="card-body py-5">
+                    <div class="card-body py-3">
 
                         <div class="row justify-content-center"  >
                             <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" style="width:150px; ">
@@ -35,7 +35,7 @@
                         <div>
                             <h1 align="center"><b>SIRAMA</b> </h1>
                             <h3 align="center">( Sistem Informasi Asrama BPSDM )</h3>
-                        </div> <br><br>
+                        </div>
                         @if (session()->has('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             {{session('success')}}
@@ -54,7 +54,7 @@
                             @csrf
 
                             <div class="form-group row justify-content-center">
-                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:150px">
+                                <div class="col-md-8 col-sm-8" style="margin-bottom:10px ; margin-top:50px">
                                     <!-- <label for="username" class="form-label">Username</label> -->
                                     <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan email" name="email" value="{{ old('email') }}" required autofocus >
 
