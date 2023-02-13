@@ -17,7 +17,7 @@
     <div class="card pt-1" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
         <div class="card-body">
             <button class="btn btn-success" ><a href="/tipe/create" style="color:white; " >Tambah Tipe Kamar</a></button> <br><br>
-            <table id="myTable" class="table  table-bordered  table-hover" style="width:100%;" style="width:100%;background-color: white">
+            <table id="myTable" class="table  table-bordered  table-hover" style="width:100%;background-color: white">
                 <thead>
                     <tr class="bg-secondary text-center" scope="col" class="">
                         <th style="width:5%">No.</th>
