@@ -10001,7 +10001,7 @@ h3 {
 
   .table-bordered th,
 .table-bordered td {
-    border: 1px solid #dee2e6 !important;
+    border: 1px solid #013555 !important;
   }
 
   .table-dark {
@@ -10011,11 +10011,11 @@ h3 {
 .table-dark td,
 .table-dark thead th,
 .table-dark tbody + tbody {
-    border-color: #dee2e6;
+    border-color: #013555;
   }
 
   .table .thead-dark th {
     color: inherit;
-    border-color: #dee2e6;
+    border-color: #013555;
   }
 }

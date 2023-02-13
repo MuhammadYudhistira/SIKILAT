@@ -177,9 +177,9 @@ table, th, td {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
+  width:20%; /* Full-width */
   font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
+  padding: 3px 3px 3px 5px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
@@ -198,7 +198,9 @@ table, th, td {
 
 #myTable th{
   text-align: center; /* Left-align text */
-  padding: 15px; /* Add padding */
+  padding: 10px; /* Add padding */
+  background-color: #013555;
+  color:#fff;
 }
 
 #myTable tr {
@@ -210,16 +212,3 @@ table, th, td {
   /* Add a grey background color to the table header and on hover */
   background-color: #f1f1f1;
 }
-
-/* table.dataTable thead .sorting:after,
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_desc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:before {
-  bottom: .5em;
-} */
