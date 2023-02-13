@@ -64,7 +64,7 @@
             <div class="w3-dropdown-hover">
                     <select class="form-select" name="search">
                         <div class="w3-dropdown-content w3-bar-block">
-                        {{-- <option hidden >{{request('search')}}</option> --}}
+                        {{-- <option selected hidden >{{request('search')}}</option> --}}
                         <option value="">All</option>
                         @foreach ($tipe as $t)
                         <option value="{{$t->id}}">{{$t->nama}}</option>
