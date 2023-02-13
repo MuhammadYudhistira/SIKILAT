@@ -86,7 +86,7 @@
         <!-- kamar-kamar -->
         @foreach ($kamar as $k)
                 {{-- @if($k->tipe_id == 2) --}}
-                <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong"
+                <button class="btn btn-primary"  data-toggle="modal" data-target="#kamar{{$k->id}}"
                 @if($k->status == 1)
                 class="btn btn-db"
                 @else
@@ -98,7 +98,7 @@
                 {{-- @endif --}}
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="kamar{{$k->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content"  align="center" style="background-color:#013555">
                     <b class="modal-title" id="exampleModalLongTitle" style="color:white; font-size: 30px; text-align:center ">Kamar {{$k->nomor}}</b>
@@ -110,7 +110,7 @@
                             <b style="font-size:10px"> {{$k->tipe->harga}} </b>
                         </button>
                         <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
-                            <b style="font-size:10px"> 2 Orang </b>
+                            <b style="font-size:10px"> {{$k->tipe->nama}} </b>
                         </button>
                     </div>
                     <br><br>

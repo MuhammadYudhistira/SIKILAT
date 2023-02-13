@@ -51,6 +51,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tamu/{tamu}/destroy', [TamuController::class, 'destroy']);
 
     Route::get('/laporan', [LaporanController::class, 'index']);
+    Route::get('/laporan/{transaksi}/detail', [LaporanController::class, 'detail']);
 
 });
 
