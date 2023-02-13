@@ -6,8 +6,8 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb mb-5" style="background-color:white">
         <li class="breadcrumb-item active" aria-current="page" style="margin-top:5px">
-            <i class="fas fa-users mr-2" style="color:black"></i>
-            <b style="font-size:20px; color:black">Daftar Tamu</b>
+            <i class="fas fa-users mr-2" style="color:#013555"></i>
+            <b style="font-size:20px; color:#013555">Daftar Tamu</b>
         </li>
     </ol>
 </nav>

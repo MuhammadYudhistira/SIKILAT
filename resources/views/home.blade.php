@@ -10,7 +10,7 @@
             <b style="font-size:20px; color:#013555">Dashboard</b>
         </li>
     </ol>
-{{-- </nav> --}}
+</nav>
 @endsection
 
 @section('content')
@@ -121,7 +121,6 @@
                 </div>
             </div>
         </div>
-
         @endforeach
     </div>
 </div>
