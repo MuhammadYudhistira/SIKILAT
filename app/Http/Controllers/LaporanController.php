@@ -8,9 +8,19 @@ use Illuminate\Http\Request;
 class LaporanController extends Controller
 {
     public function index(){
-        // dd(request('tanggal_masuk'));
+
+        $start = request('start_date');
+        $end = request('end_date');
+        $transaksi = Transaksi::latest()->filter(request(['search']))->get();
+
+        // dd($start, $end);
+        if($start && $end){
+           $transaksi = Transaksi::whereBetween('tanggal_masuk', [$start, $end])->get();
+        }
+
+
         return view('laporan.index',[
-            "transaksi" => Transaksi::latest()->filter(request(['search']))->get()
+            "transaksi" => $transaksi
         ]);
 
     }
