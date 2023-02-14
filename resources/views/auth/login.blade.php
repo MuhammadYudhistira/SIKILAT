@@ -28,7 +28,6 @@
             <div class="col-md-6">
                 <div class="card py-5">
                     <div class="card-body py-3">
-
                         <div class="row justify-content-center"  >
                             <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" style="width:150px; ">
                         </div>
@@ -50,7 +49,7 @@
                         </div>
                         @endif
 
-                        <form method="POST" action="/auth/login" class="mt-5">
+                        <form method="POST" action="/auth/login" class="mt-3">
                             @csrf
 
                             <div class="form-group row justify-content-center">

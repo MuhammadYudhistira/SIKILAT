@@ -12,13 +12,12 @@
 @endsection
 
 @section('content')
-    <div class="card pt-3" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
-        <div class="card-body">
+    <div class="card pt-1 " style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
+        <div class="card-body px-4">
             <div  align="center" style="margin-bottom:10px">
                 <t style="font-size:30px;">Detail Tamu Kamar {{$transaksi->kamar->nomor}}</t>
             </div>
-
-            <form action="" method="get" class="mb-5">
+            <form action="" method="get" class="mb-2">
                 <div class="mb-3" hidden>
                     <label for="status" class="form-label" ><t>id_kamar</t></label>
                     <input type="text" class="form-control" id="status" placeholder="Masukkan nama" name="kamar_id" value="" required>
@@ -43,45 +42,29 @@
                     <label for="status" class="form-label" ><t>Email</t></label>
                     <input type="text" class="form-control" id="status" placeholder="Masukkan Email" name="email" value="{{$transaksi->email}}" disabled required>
                 </div>
-                <div class="mb-3">
-                    <label for="status" class="form-label" ><t>Jumlah Hari</t></label>
-                    <div class="row">
-                    {{-- <div class="col-md-2 col-sm-12" >
-                        <input class="form-control" type="text" aria-label="default input example">
-                    </div> --}}
-                    <div class="col-md-1 col-sm-12" >
-                        <div>
-                            <t>Dari</t>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12" >
+                <div class="mb-3 ">
+                    <label for="status" class="form-label" ><t>Jumlah Hari</t></label><br>
+                    <label for="dari">Dari</label>
                         <input type="date" id="date" name="tanggal_masuk" value="{{$transaksi->tanggal_masuk}}" disabled required>
-                    </div>
-                    <div class="col-md-1 col-sm-12" >
-                        <div>
-                            <t>Sampai</t>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12" >
+                    <label for="sampai" style="margin-left:20px">Sampai</label>
                         <input type="date" id="date" name="tanggal_keluar" value="{{$transaksi->tanggal_keluar}}" disabled required>
-                    </div>
                 </div>
-
-                </div>
-
-                {{-- <div class="mb-3">
-                    <label for="maksimal" class="form-label"> <t>Harga</t></label>
-                    <input type="number" class="form-control" id="maksimal" name="total" value="{{$kamar->tipe->harga}}" required disabled>
-                </div> --}}
-                <div class="mb-3">
+                <div class="mb-3 ">
                     <label for="maksimal" class="form-label"> <t>Total Harga</t></label>
                     <input type="number" class="form-control" id="maksimal" name="total" value="{{$transaksi->total}}" required disabled>
                 </div>
-
-        {{-- <div class="mb-3">
-            <button type="submit" class="btn btn-success px-3">Kirim</button>
-        </div> --}}
-    </form>
+                <div class="mt-5">
+                    <a type="button" href="/laporan" class="btn btn-secondary" style=" width:100px; font-size:15px" data-dismiss="modal"><b>Kembali</b></a>
+                    <button type="button" href="" class="btn btn-success" style=" width:100px; font-size:15px; margin-left:20px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                            <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                            <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+                        </svg>
+                        <b style="margin-left:5px">Cetak</b> 
+                    </button>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
 

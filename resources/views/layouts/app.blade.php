@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
 
     <!-- tab icon -->
-    <link rel="shortcut icon" href="{{ asset('logoPuskesmas.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logobpsdm.png" type="image/x-icon">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -58,15 +58,13 @@
     <div id="app">
         <!-- navbar-side -->
         <nav class="navbar-side" id="navbar-side" style=" background-color: #013555;">
-            <div class="text-center mt-1" style="width:40px; ">
-                <a href="" align="center">
-                    <img src="{{ asset('img/logobpsdm.png') }}" alt="logo BPSDM" class="logo" style="margin-left:20px">
-
-                </a>
+            <div class="logo mx-1" style="margin-top:10px">
+                <a href="index.html"><img src="{{ asset('img/logo2.png') }}" alt="Logo" srcset=""></a>
             </div>
-            <div class="menu-list  pt-3">
+            <div class="menu-list  pt-3 px-1">
+                <label for="menu" style="margin-left:10px; color:#2a6285">Main Menu</label>
                 <div class="menu-item" >
-                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i><b>Dashboard</b></a>
+                    <a href="/" class="menu-link nav-link "><i class="fas fa-home icon"></i>Dashboard</a>
                 </div>
 
                 <div class="menu-item">
@@ -74,11 +72,11 @@
                 </div>
 
                 <div class="menu-item">
-                    <div class="nav__dropdown">
+                    <div class="nav__dropdown mt-1">
                         <a href="#" class="menu-link nav_link" style="margin-left: 20px; " >
                             <i class="fas fa-bed icon" aria-hidden="true"></i>
                             <span class="nav__name">Kelola Kamar</span>
-                            <i class="fa fa-caret-down" style="margin-left:45px"></i>
+                            <i class="fa fa-caret-down" style="margin-left:40px"></i>
                         </a>
                         <div class="nav__dropdown-collapse">
                             <div class="nav__dropdown-content">
@@ -90,7 +88,7 @@
                 </div>
 
                 <div class="menu-item" style="margin-top: 10px">
-                    <a href="/laporan" class="menu-link nav-link"><i class="fas fa-book icon"  ></i><b>Laporan</b></a>
+                    <a href="/laporan" class="menu-link nav-link"><i class="fas fa-book icon"  ></i>Laporan</a>
                 </div>
             </div>
             <div class="logout mt-3 text-center">
