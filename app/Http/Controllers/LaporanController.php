@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\LaporanExport;
+use App\Exports\LaporanExport;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
@@ -17,7 +18,7 @@ class LaporanController extends Controller
 
         // dd($start, $end);
         if($start && $end){
-           $transaksi = Transaksi::whereBetween('tanggal_masuk', [$start, $end])->get();
+            $transaksi = Transaksi::whereBetween('tanggal_masuk', [$start, $end])->get();
         }
 
 
