@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\LaporanExport;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class LaporanController extends Controller
 {
@@ -29,5 +31,10 @@ class LaporanController extends Controller
         // $transaksi = Transaksi::all();
         // dd($transaksi);
         return view('laporan.detail',compact('transaksi'));
+    }
+
+    public function export(){
+
+        return Excel::download(new LaporanExport, 'Laporan.xlsx');
     }
 }
