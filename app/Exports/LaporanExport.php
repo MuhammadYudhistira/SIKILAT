@@ -26,7 +26,7 @@ WithColumnFormatting
 
         // dd($start, $end);
         if($start && $end){
-           $transaksi = Transaksi::whereBetween('tanggal_masuk', [$start, $end])->get();
+            $transaksi = Transaksi::whereBetween('tanggal_masuk', [$start, $end])->get();
         }
 
 

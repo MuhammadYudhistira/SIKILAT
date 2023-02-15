@@ -53,6 +53,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/laporan', [LaporanController::class, 'index']);
     Route::get('/laporan-export', [LaporanController::class, 'export']);
     Route::get('/laporan/{transaksi}/detail', [LaporanController::class, 'detail']);
+    Route::get('/laporan/{transaksi}/cetak', [LaporanController::class, 'cetak']);
 
 
 });
