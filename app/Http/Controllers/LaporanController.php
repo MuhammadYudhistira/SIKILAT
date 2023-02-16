@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Exports\LaporanExport;
 use App\Models\Transaksi;
-use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use PDF;
 
 class LaporanController extends Controller
 {
@@ -41,7 +40,7 @@ class LaporanController extends Controller
 
     public function cetak(Transaksi $transaksi){
 
-        $pdf = pdf::loadview('laporan.invoicepdf', ['transaksi'=>$transaksi]);
+        $pdf = PDF::loadview('laporan.invoicepdf', ['transaksi'=>$transaksi]);
         return $pdf->download('cetak-invoice.pdf');
 
         // return view('laporan.invoicepdf',compact('transaksi'));

@@ -11,8 +11,8 @@ class KamarController extends Controller
 {
     public function index(){
 
-        $kamar = Kamar::orderBy('nomor')->get();
         $tipe = Tipe::all();
+        $kamar = Kamar::orderBy('nomor')->filter(request(['search']))->get();
 
         return view('kamar.index', compact('kamar', 'tipe'));
     }

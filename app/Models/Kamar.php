@@ -11,6 +11,13 @@ class Kamar extends Model
     protected $table = "kamar";
     protected $guarded = ["id"];
 
+    public function scopeFilter($query, array $filter){
+
+        $query->when($filter['search'] ?? false, function ($query, $search){
+            return $query->where('nomor', 'like', '%' . $search . '%');
+        });
+    }
+
     public function Transaksi(){
         return $this->hasMany(Transaksi::class);
     }

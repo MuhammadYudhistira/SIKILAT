@@ -48,6 +48,6 @@ class TamuController extends Controller
 
 
 
-        return redirect('/tamu');
+        return redirect('/laporan');
     }
 }

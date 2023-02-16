@@ -21,7 +21,6 @@
                 <t style="font-size:35px">Laporan Transaksi</t>
             </div>
             <div class="col-4 mt-3">
-
                 <form action="/laporan">
                     <div class="input-group align-right">
                         <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
