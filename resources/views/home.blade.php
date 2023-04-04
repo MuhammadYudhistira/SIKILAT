@@ -70,7 +70,7 @@
         <!-- kamar-kamar -->
         @foreach ($kamar as $k)
                 {{-- @if($k->tipe_id == 2) --}}
-                <button class="btn btn-primary"  data-toggle="modal" data-target="#kamar{{$k->id}}"
+                <button class="btn btn-primary m-2"  data-toggle="modal" data-target="#kamar{{$k->id}}"
                 @if($k->status == 1)
                 class="btn btn-db"
                 @else

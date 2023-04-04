@@ -15,6 +15,15 @@
     <t style="font-size:30px">Daftar Kamar</t><br><br>
     <div class="card pt-1" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
         <div class="card-body">
+            <div class="col-4 mt-3" style="float: right;">
+                <form action="/kamar">
+                    <div class="input-group align-right">
+                        <input type="text" class="form-control" placeholder="Search Kamar..." name="search" value="{{request('search')}}">
+                        <button class="btn btn-success " type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <br>
             <button class="btn btn-success" ><a href="/kamar/create" style="color:white; " >Tambah Kamar</a></button> <br><br>
             <table id="myTable" class="table  table-bordered  table-hover"style="width:100%;background-color: white">
                 <thead>

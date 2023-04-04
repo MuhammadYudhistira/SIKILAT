@@ -36,7 +36,6 @@ class TamuController extends Controller
 
         $kamar->update([
             "maksimal"=> $kamar->maksimal + 1,
-
         ]);
 
         if($kamar->maksimal >= 1){
@@ -49,6 +48,6 @@ class TamuController extends Controller
 
 
 
-        return redirect('/tamu');
+        return redirect('/laporan');
     }
 }
