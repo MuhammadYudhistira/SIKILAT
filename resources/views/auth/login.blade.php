@@ -29,7 +29,7 @@
                 <div class="card py-5">
                     <div class="card-body py-3">
                         <div class="row justify-content-center"  >
-                            <img  src="{{ asset('img/logo.png') }}" alt="logo puskesmas" style="width:150px; ">
+                            <img  src="{{ asset('img/logobpsdm.png') }}" alt="logo puskesmas" style="width:150px; ">
                         </div>
                         <div>
                             <h1 align="center"><b>SIRAMA</b> </h1>
