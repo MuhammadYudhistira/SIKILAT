@@ -13,7 +13,7 @@
 
 @section('content')
     <div class="card pt-3" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
-        <div class="card-body">
+        <div class="card-body" style="padding:10px">
             <div  align="center" style="margin-bottom:10px">
                 <t style="font-size:30px;">Check In Kamar {{$kamar->nomor}}</t>
             </div>
@@ -47,9 +47,6 @@
                 <div class="mb-3">
                     <label for="status" class="form-label" ><t>Jumlah Hari</t></label>
                     <div class="row">
-                    {{-- <div class="col-md-2 col-sm-12" >
-                        <input class="form-control" type="text" aria-label="default input example">
-                    </div> --}}
                     <div class="col-md-1 col-sm-12" >
                         <div>
                             <t>Dari</t>
@@ -68,23 +65,9 @@
                         <input type="date" id="date" name="tanggal_keluar">
                     </div>
                 </div>
-
-                </div>
-
-                {{-- <div class="mb-3">
-                    <label for="maksimal" class="form-label"> <t>Harga</t></label>
-                    <input type="number" class="form-control" id="maksimal" name="total" value="{{$kamar->tipe->harga}}" required disabled>
-                </div>
-                <div class="mb-3">
-                    <label for="maksimal" class="form-label"> <t>Total Harga</t></label>
-                    <input type="number" class="form-control" id="maksimal" name="total" value="" required disabled>
-                </div> --}}
-
-        <div class="mb-3">
-            <button type="submit" class="btn btn-success px-3">Kirim</button>
-        </div>
-    </form>
+                <br><br>
+                <button type="submit"  class="btn btn-primary px-3"><b>Check In</b> </button>
+            </form>
         </div>
     </div>
-
 @endsection

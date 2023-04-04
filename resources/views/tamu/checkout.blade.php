@@ -55,10 +55,31 @@
                 </div>
                 <div class="mt-4">
                     <a type="button" href="/tamu" class="btn btn-secondary" style=" width:100px; font-size:15px; margin-right:10px" data-dismiss="modal"><b>Kembali</b></a>
-                    <a type="button" href="/tamu/{{$tamu->id}}/destroy" class="btn btn-danger px-3" style="font-size:15px"><b>Check Out</b></a>
+                    <a type="button" id="cekout" data-toggle="modal" data-target="#checkout"  class="btn btn-danger px-3" style="font-size:15px"><b>Check Out</b></a>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="checkout" tabindex="-1" role="dialog" aria-labelledby="checkoutTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content"  align="center" style="background-color:#013555; padding:10px; width:80%">
+                                <b class="modal-title" id="checkoutTitle" style="color:white; font-size: 30px; text-align:center ">Warning!!!</b>
+                                <br>
+                                <div>
+                                    <t style="color:white;">Apakah anda yakin akan melakukan Check Out??</t>
+                                </div>
+                                <div style="margin-top:20px;margin-buttom:30px; ">
+                                    <button type="button" class="btn btn-secondary" style="margin-right:150px; width:100px; font-size:15px" data-dismiss="modal"><b>Batal</b> </button>
+                                    <a type="button" href="/tamu/{{$tamu->id}}/destroy" style="width:100px;font-size:15px"   class="btn btn-danger"><b>Check Out</b> </a>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </form>
-        </div>
+            
+
     </div>
 
 @endsection
+<!-- pop up kamar -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

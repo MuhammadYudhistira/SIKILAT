@@ -45,21 +45,6 @@
     <div class="card-body">
         <!-- dropdown tipe kamar -->
         <div>
-
-            {{-- <div class="w3-dropdown-hover">
-                <div class="btn btn-light">
-                    <b style="color:#8C8C8C">Kamar Standar</b>
-                    <i class="fa fa-caret-down"></i>
-                </div>
-                <div class="w3-dropdown-content w3-bar-block">
-                    <form action="/">
-                    @foreach ($tipe as $t)
-                    <input type="text" class="form-control" {{$t->nama}}" name="search" value="{{$t->nama}}">
-                    @endforeach
-                    <button class="w3-bar-item w3-button" type="submit">Kamar {{$t->nama}}</button>
-                    </form>
-                </div>
-            </div> --}}
             <form action="/">
             <div class="w3-dropdown-hover">
                     <select class="form-select" name="search">
@@ -73,13 +58,12 @@
                     </select>
                 </div>
                 <button class="btn btn-success " type="submit">Search</button>
+                <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
+                <b style="color:#013555">Kamar Kosong</b>
+
+                <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:30px; color:#FF5959"></i>
+                <b style="color:#013555">Kamar Terisi</b>
             </form>
-
-            <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:100px; color:#4FCF43"></i>
-            <b style="color:#013555">Kamar Kosong</b>
-
-            <i class="fas fa-circle icon" aria-hidden="true" style="margin-left:30px; color:#FF5959"></i>
-            <b style="color:#013555">Kamar Terisi</b>
         </div>
 
         <br>
@@ -97,7 +81,7 @@
                 </button>
                 {{-- @endif --}}
 
-        <!-- Modal -->
+        <!-- Modal Pop Up Kamar -->
         <div class="modal fade" id="kamar{{$k->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content"  align="center" style="background-color:#013555">
@@ -116,7 +100,7 @@
                     <br><br>
                     <div style="margin-bottom:10px; ">
                         <button type="button" class="btn btn-secondary" style="margin-right:200px; width:100px; font-size:15px" data-dismiss="modal"><b>Kembali</b> </button>
-                        <a type="button" href="/transaksi/{{$k->id}}/checkin" style="width:100px;font-size:15px"   class="btn btn-primary"><b>Cek In</b> </a>
+                        <a type="button" href="/transaksi/{{$k->id}}/checkin" style="width:100px;font-size:15px"   class="btn btn-primary"><b>Chek In</b> </a>
                     </div>
                 </div>
             </div>
