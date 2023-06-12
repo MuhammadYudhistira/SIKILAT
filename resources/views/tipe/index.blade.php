@@ -1,29 +1,29 @@
 @extends('layouts.app')
 
-@section('title', "Tipe Kamar")
+@section('title', "Jenis Gedung")
 
 @section('bread_crumb')
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb " style="background-color:white">
         <li class="breadcrumb-item"><a href=" "><i class="fas fa-bed icon mr-2"></i>Kelola Kamar</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Tipe Kamar</li>
+        <li class="breadcrumb-item active" aria-current="page">Jenis Gedung</li>
     </ol>
 </nav>
 @endsection
 
 @section('content')
 <body>
-    <t style="font-size:30px">Tipe Kamar</t><br><br>
+    <t style="font-size:30px">Jenis Gedung</t><br><br>
     <div class="card pt-1" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px;">
         <div class="card-body">
-            <button class="btn btn-success" ><a href="/tipe/create" style="color:white; " >Tambah Tipe Kamar</a></button> <br><br>
+            <button class="btn btn-success" ><a href="/tipe/create" style="color:white; " >Tambah Gedung</a></button> <br><br>
             <table id="myTable" class="table  table-bordered  table-hover" style="width:100%;background-color: white">
                 <thead>
                     <tr class="bg-secondary text-center" scope="col" class="">
                         <th style="width:5%">No.</th>
-                        <th style="width:30%">Tipe Kamar</th>
+                        <th style="width:30%">Nama Gedung</th>
                         <th style="width:15%">Harga</th>
-                        <th style="width:10%">Jumlah Kamar</th>
+                        {{-- <th style="width:10%">Jumlah Kamar</th> --}}
                         <th style="width:25%">Aksi</th>
                     </tr>
                 </thead>
@@ -33,7 +33,7 @@
                         <td>{{ $loop->iteration }}.</td>
                         <td>{{ $t->nama }}</td>
                         <td>Rp.{{ $t->harga }}</td>
-                        <td>{{$count}}</td>
+                        {{-- <td>{{$count}}</td> --}}
                         <td>
                             <a href="/tipe/{{ $t->id }}/edit" class="btn btn-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">

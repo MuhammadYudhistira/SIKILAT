@@ -21,5 +21,11 @@ class UserSeeders extends Seeder
             'email' => 'admin@gmail.com',
             'password' =>Hash::make('123123')
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Admin BPSDM',
+            'email' => 'admin@bpsdm.sumbarprov.go.id',
+            'password' =>Hash::make('123123')
+        ]);
     }
 }

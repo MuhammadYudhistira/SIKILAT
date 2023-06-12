@@ -28,7 +28,7 @@ class KamarController extends Controller
     public function store(Request $request){
         $validated = $request->validate([
             'tipe_id' => 'required',
-            'nomor' => 'required',
+            'nomor' => 'required|unique:kamar,nomor',
             'status' => 'required',
             'maksimal' => 'required|min:1'
         ]);
@@ -56,7 +56,7 @@ class KamarController extends Controller
 
         $validated = $request->validate([
             'tipe_id' => 'required',
-            'nomor' => 'required',
+            'nomor' => 'required|unique:kamar,nomor',
             'status' => 'required',
             'maksimal' => 'required|min:1'
         ]);

@@ -30,17 +30,17 @@
             </div>
             <div class="mb-3">
                 <label for="nama" class="form-label"><b>Nomor</b></label>
-                <input type="text" class="form-control" id="nomor" placeholder="Masukkan nama produk" name="nomor">
+                <input type="text" class="form-control" id="nomor" placeholder="Masukkan Nomor Kamar" name="nomor">
             </div>
 
             <div class="mb-3" hidden>
-                <label for="status" class="form-label" ><b>Status</b></label>    
-                <input type="number" class="form-control" id="status" placeholder="Masukkan harga produk" name="status" min="1" value="1">
+                <label for="status" class="form-label" ><b>Status</b></label>
+                <input type="number" class="form-control" id="status" placeholder="Masukkan Status Kamar" name="status" min="1" value="1">
             </div>
 
             <div class="mb-3">
                 <label for="maksimal" class="form-label"><b>Kapasitas</b></label>
-                <input type="number" class="form-control" id="maksimal" placeholder="Masukkan harga produk" name="maksimal" min="1">
+                <input type="number" class="form-control" id="maksimal" placeholder="Masukkan Kapasitas Kamar" name="maksimal" min="1">
             </div>
 
             <div class="mt-4">

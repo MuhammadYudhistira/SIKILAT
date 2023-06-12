@@ -80,7 +80,7 @@
                         </a>
                         <div class="nav__dropdown-collapse">
                             <div class="nav__dropdown-content">
-                                <a href="/tipe" class="nav__dropdown-item">Tipe Kamar</a>
+                                <a href="/tipe" class="nav__dropdown-item">Jenis Gedung</a>
                                 <a href="/kamar" class="nav__dropdown-item">Detail Kamar</a>
                             </div>
                         </div>

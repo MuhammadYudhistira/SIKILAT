@@ -93,7 +93,7 @@
                         <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
                             <b style="font-size:10px"> {{$k->tipe->harga}} </b>
                         </button>
-                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:100px ; height:20px; padding:0px">
+                        <button type="button" class="btn btn-label" data-dismiss="modal" style="width:120px ; height:20px; padding:0px">
                             <b style="font-size:10px"> {{$k->tipe->nama}} </b>
                         </button>
                     </div>

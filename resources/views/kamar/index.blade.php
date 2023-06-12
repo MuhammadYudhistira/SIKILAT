@@ -30,8 +30,8 @@
                     <tr class="bg-secondary text-center" scope="col" class="">
                         <th style="width:5%">No.</th>
                         <th style="width:10%">Nomor Kamar</th>
-                        <th style="width:15%">Tipe Kamar</th>
                         <th style="width:15%">Harga</th>
+                        <th style="width:15%">Gedung</th>
                         <th style="width:10%">Kapasitas</th>
                         <th style="width:20%">Aksi</th>
                     </tr>

@@ -16,13 +16,18 @@ class TipeSeeders extends Seeder
     public function run()
     {
         DB::table('tipe_kamar')->insert([
-            'nama' => 'Standard',
-            'harga' => '100000'
+            'nama' => 'Gedung Tuah Sakato',
+            'harga' => '75000'
         ]);
 
         DB::table('tipe_kamar')->insert([
-            'nama' => 'Deluxe',
-            'harga' => '200000'
+            'nama' => 'Saiyo',
+            'harga' => '75000'
+        ]);
+
+        DB::table('tipe_kamar')->insert([
+            'nama' => 'Tuah Supakaik',
+            'harga' => '75000'
         ]);
     }
 }

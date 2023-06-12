@@ -10,7 +10,7 @@ class TipeController extends Controller
 {
     public function index(){
         $tipe  = Tipe::all();
-        $count = Kamar::where('tipe_id', 1)->count();
+        $count = Kamar::where('tipe_id', 3)->count();
         // // $count2 = Kamar::where('tipe_id', 2)->count();
 
         return view('tipe.index', compact('tipe','count'));

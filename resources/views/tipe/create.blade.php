@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', "Tipe Kamar")
+@section('title', "Tambah Gedung")
 
 @section('bread_crumb')
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb " style="background-color:white">
         <li class="breadcrumb-item"><a href=" "><i class="fas fa-bed icon mr-2"></i>Kelola Kamar</a></li>
-        <li class="breadcrumb-item"><a href="/tipe">Tipe Kamar</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Tambah Tipe Kamar</li>
+        <li class="breadcrumb-item"><a href="/tipe">Jenis Gedung</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tambah Jenis Gedung</li>
     </ol>
 </nav>
 @endsection
@@ -16,7 +16,7 @@
 <body>
     <div class="card pt-1" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);border-radius:10px; width:70%">
         <div class="card-body px-5">
-            <center><t style="font-size:30px;">Form Tambah Tipe Kamar</t></center><br>
+            <center><t style="font-size:30px;">Form Tambah Jenis Gedung</t></center><br>
             <form action="/tipe" method="post" class="mb-5">
                 @csrf
                 <div class="mb-3">
