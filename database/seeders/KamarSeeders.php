@@ -18,7 +18,7 @@ class KamarSeeders extends Seeder
     {
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "201T",
+            "nomor" => "T201",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -26,7 +26,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "202T",
+            "nomor" => "T202",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -34,7 +34,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "203T",
+            "nomor" => "T203",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -42,7 +42,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "204T",
+            "nomor" => "T204",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -50,7 +50,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "205T",
+            "nomor" => "T205",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -58,7 +58,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "206T",
+            "nomor" => "T206",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -66,7 +66,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "207T",
+            "nomor" => "T207",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -74,7 +74,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "208T",
+            "nomor" => "T208",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -82,7 +82,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "209T",
+            "nomor" => "T209",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -90,7 +90,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "210T",
+            "nomor" => "T210",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -98,7 +98,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "211T",
+            "nomor" => "T211",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -106,7 +106,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "212T",
+            "nomor" => "T212",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -114,7 +114,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "213T",
+            "nomor" => "T213",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -122,7 +122,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "214T",
+            "nomor" => "T214",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -130,7 +130,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "215T",
+            "nomor" => "T215",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -138,7 +138,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "216T",
+            "nomor" => "T216",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -146,7 +146,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "1",
-            "nomor" => "217T",
+            "nomor" => "T217",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -283,14 +283,6 @@ class KamarSeeders extends Seeder
         Kamar::create([
             "tipe_id" => "1",
             "nomor" => "317",
-            "status" => "1",
-            "maksimal" => "3",
-            "created_at" => Carbon::now()->format('Y-m-d'),
-            "updated_at" => Carbon::now()->format('Y-m-d')
-        ]);
-        Kamar::create([
-            "tipe_id" => "1",
-            "nomor" => "217T",
             "status" => "1",
             "maksimal" => "3",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -497,7 +489,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "201S",
+            "nomor" => "S201",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -505,7 +497,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "202S",
+            "nomor" => "S202",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -513,7 +505,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "203S",
+            "nomor" => "S203",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -521,7 +513,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "204S",
+            "nomor" => "S204",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -529,7 +521,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "205S",
+            "nomor" => "S205",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -537,7 +529,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "206S",
+            "nomor" => "S206",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -545,7 +537,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "207S",
+            "nomor" => "S207",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
@@ -553,7 +545,7 @@ class KamarSeeders extends Seeder
         ]);
         Kamar::create([
             "tipe_id" => "2",
-            "nomor" => "208S",
+            "nomor" => "S208",
             "status" => "1",
             "maksimal" => "2",
             "created_at" => Carbon::now()->format('Y-m-d'),
