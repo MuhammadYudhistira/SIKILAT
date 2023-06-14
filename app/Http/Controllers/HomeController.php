@@ -86,8 +86,8 @@ class HomeController extends Controller
 
         // $transaksi;
         // $tamu;
-
         // dd($validated, $kamar, $tamu);
+
 
         return redirect("/tamu");
     }

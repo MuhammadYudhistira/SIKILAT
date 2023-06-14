@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-
         Schema::create('tamu', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string('nohp');
-            $table->string('status');
+            $table->unsignedBigInteger("transaksi_id");
             $table->timestamps();
-        });
 
+            $table->foreign("transaksi_id")->references("id")->on("transaksi")->cascadeOnUpdate()->cascadeOnDelete();
+        });
     }
 
     /**
