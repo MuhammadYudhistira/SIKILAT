@@ -28,7 +28,6 @@
             <table id="myTable" class="table  table-bordered  table-hover"style="width:100%;background-color: white">
                 <thead>
                     <tr class="bg-secondary text-center" scope="col" class="">
-                        <th style="width:5%">No.</th>
                         <th style="width:10%">Nomor Kamar</th>
                         <th style="width:15%">Harga</th>
                         <th style="width:15%">Gedung</th>
@@ -39,7 +38,6 @@
                 <tbody>
                     @foreach ($kamar as $k)
                     <tr class="text-center">
-                        <td>{{ $loop->iteration }}.</td>
                         <td>{{ $k->nomor }}</td>
                         <td>Rp.{{ $k->tipe->harga }}</td>
                         <td>{{ $k->tipe->nama }}</td>
@@ -61,7 +59,13 @@
                  @endforeach
                 </tbody>
             </table>
+
+        </div>
+        <div class="card-footer">
+            {{$kamar->links()}}
         </div>
     </div>
+
+
 @endsection
 

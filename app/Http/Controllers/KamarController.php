@@ -12,7 +12,7 @@ class KamarController extends Controller
     public function index(){
 
         $tipe = Tipe::all();
-        $kamar = Kamar::orderBy('nomor')->filter(request(['search']))->get();
+        $kamar = Kamar::orderBy('nomor')->filter(request(['search']))->paginate(10)->withQueryString();
 
         return view('kamar.index', compact('kamar', 'tipe'));
     }

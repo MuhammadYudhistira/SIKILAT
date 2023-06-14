@@ -42,7 +42,7 @@
 
 
 <div class="card pt-3" style="background-color:#EDEDED;border-radius:10px">
-    <div class="card-body">
+    <div class="card-body" >
         <!-- dropdown tipe kamar -->
         <div>
             <form action="/">
@@ -69,15 +69,13 @@
         <br>
         <!-- kamar-kamar -->
         @foreach ($kamar as $k)
-                {{-- @if($k->tipe_id == 2) --}}
                 <button class="btn btn-primary m-2"  data-toggle="modal" data-target="#kamar{{$k->id}}"
                 @if($k->status == 1)
                 class="btn btn-db"
                 @else
                 class="btn btn-db" @disabled(true)
                 @endif>
-                {{-- <a href=" "></a> --}}
-                    <b style="font-size:20px" >{{$k->nomor}}</b>
+                    <b style="font-size:18px" >{{$k->nomor}}</b>
                 </button>
                 {{-- @endif --}}
 
